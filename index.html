@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCPSuperHero - MCP Analytics & Monitoring Platform</title>
+    <meta name="description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics, error tracking, and cost management. Start free today.">
+    <meta name="keywords" content="MCP monitoring, Model Context Protocol, analytics, performance tracking, cost management">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MCPSuperHero - MCP Analytics & Monitoring Platform">
+    <meta property="og:description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics and cost management.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mcpsuperhero.com">
+    <meta property="og:image" content="https://mcpsuperhero.com/og-image.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MCPSuperHero - MCP Analytics & Monitoring Platform">
+    <meta name="twitter:description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics and cost management.">
+    <meta name="twitter:image" content="https://mcpsuperhero.com/og-image.jpg">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "MCPSuperHero",
+        "description": "MCP Analytics & Monitoring Platform for tracking, monitoring, and optimizing Model Context Protocol servers",
+        "url": "https://mcpsuperhero.com",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "9.99",
+            "priceCurrency": "USD",
+            "priceValidUntil": "2026-12-31"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "TheAISuperHeroes",
+            "url": "https://theaisuperheroes.com"
+        }
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --brand-blue: #2563eb;
+            --brand-violet: #7c3aed;
+            --brand-amber: #fbbf24;
+            --dark-bg: #0f172a;
+            --dark-card: #1e293b;
+            --dark-border: #334155;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--dark-bg);
+            color: #e2e8f0;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--brand-blue), var(--brand-violet));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-border {
+            border-image: linear-gradient(135deg, var(--brand-blue), var(--brand-violet)) 1;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--brand-blue), var(--brand-violet));
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--brand-blue);
+            color: var(--brand-blue);
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(37, 99, 235, 0.1);
+        }
+
+        nav {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
+        }
+
+        .stat-box {
+            background-color: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+        }
+
+        .feature-card {
+            background-color: var(--dark-card);
+            border: 1px solid var(--dark-border);
+            border-radius: 0.75rem;
+            padding: 2rem;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+            border: 1px solid var(--dark-border);
+            border-radius: 0.75rem;
+            padding: 2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--dark-border);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: var(--dark-bg);
+            z-index: 50;
+            flex-direction: column;
+            padding: 6rem 2rem 2rem;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 51;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: #e2e8f0;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(10px, 10px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .desktop-menu {
+                display: none;
+            }
+        }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2C3KN7T');</script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVV7C7Y5YY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RVV7C7Y5YY');
+    </script>
+</head>
+<body class="bg-slate-950">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold gradient-text">MCPSuperHero</span>
+                </a>
+
+                <div class="desktop-menu hidden md:flex items-center space-x-8">
+                    <a href="#features" class="hover:text-blue-400 transition">Features</a>
+                    <a href="#how-it-works" class="hover:text-blue-400 transition">How It Works</a>
+                    <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
+                    <a href="#faq" class="hover:text-blue-400 transition">FAQ</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="https://buy.stripe.com/mcpsuperhero" class="btn-primary text-white px-6 py-2 rounded-lg font-semibold">
+                        Get Started
+                    </a>
+                </div>
+
+                <div class="hamburger md:hidden" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#features" class="py-3 text-lg hover:text-blue-400 transition">Features</a>
+            <a href="#how-it-works" class="py-3 text-lg hover:text-blue-400 transition">How It Works</a>
+            <a href="#pricing" class="py-3 text-lg hover:text-blue-400 transition">Pricing</a>
+            <a href="#faq" class="py-3 text-lg hover:text-blue-400 transition">FAQ</a>
+            <a href="https://buy.stripe.com/mcpsuperhero" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold mt-4 text-center">
+                Get Started
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 hero-gradient relative overflow-hidden">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                Monitor Your MCP Servers Like a <span class="gradient-text">SuperHero</span>
+            </h1>
+            <p class="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+                Real-time monitoring, usage analytics, performance optimization, and error tracking for your Model Context Protocol infrastructure. Reduce costs by 40% and gain complete visibility.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://buy.stripe.com/mcpsuperhero" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-block">
+                    Start Free Trial
+                </a>
+                <a href="#how-it-works" class="btn-secondary px-8 py-3 rounded-lg font-semibold inline-block">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="bg-slate-900 py-12 px-4 border-y border-slate-800">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text mb-2">1,000+</div>
+                    <p class="text-slate-400">MCP Servers Monitored</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text mb-2">99.9%</div>
+                    <p class="text-slate-400">Uptime Detection</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text mb-2">50M+</div>
+                    <p class="text-slate-400">Tool Calls Tracked</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold gradient-text mb-2">40%</div>
+                    <p class="text-slate-400">Avg Cost Reduction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">Powerful Features</h2>
+            <p class="text-center text-slate-400 mb-16 max-w-2xl mx-auto">
+                Everything you need to monitor, analyze, and optimize your MCP servers
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card card-hover">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-3">Real-Time Server Monitoring</h3>
+                    <p class="text-slate-400">Live status dashboards, uptime alerts, and latency tracking. Know exactly when and where issues occur.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card card-hover">
+                    <div class="text-4xl mb-4">📈</div>
+                    <h3 class="text-xl font-bold mb-3">Usage Analytics</h3>
+                    <p class="text-slate-400">Track tool call volume, understand user patterns, and identify peak usage periods with detailed breakdowns.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card card-hover">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold mb-3">Performance Optimization</h3>
+                    <p class="text-slate-400">Response time analysis, bottleneck detection, and intelligent caching recommendations.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card card-hover">
+                    <div class="text-4xl mb-4">🚨</div>
+                    <h3 class="text-xl font-bold mb-3">Error Tracking & Alerts</h3>
+                    <p class="text-slate-400">Real-time error detection with stack trace analysis and smart alerting to catch issues fast.</p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="feature-card card-hover">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold mb-3">Cost Management</h3>
+                    <p class="text-slate-400">Token usage tracking, cost per tool call analysis, and budget alerts with forecasting.</p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="feature-card card-hover">
+                    <div class="text-4xl mb-4">🎯</div>
+                    <h3 class="text-xl font-bold mb-3">Multi-Server Dashboard</h3>
+                    <p class="text-slate-400">Unified view of all your MCP servers, compare performance, and share with your team.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 px-4 bg-slate-900">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">How It Works</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-2xl font-bold mb-6">
+                        1
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Connect</h3>
+                    <p class="text-slate-400">
+                        Connect your MCP servers to MCPSuperHero with a simple API key. Takes less than 2 minutes to set up.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-violet-600 text-white text-2xl font-bold mb-6">
+                        2
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Monitor</h3>
+                    <p class="text-slate-400">
+                        Watch real-time metrics, usage patterns, and performance data flow into your unified dashboard instantly.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500 text-white text-2xl font-bold mb-6">
+                        3
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Optimize</h3>
+                    <p class="text-slate-400">
+                        Use insights to optimize performance, reduce costs, and improve your MCP infrastructure continuously.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
+            <p class="text-center text-slate-400 mb-16">
+                One powerful plan with all features included. No hidden fees.
+            </p>
+
+            <div class="feature-card border-2 border-blue-600 relative">
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 px-4 py-1 rounded-full text-sm font-semibold">
+                    Most Popular
+                </div>
+
+                <div class="mb-8">
+                    <div class="text-5xl font-bold mb-2">$9.99<span class="text-2xl text-slate-400">/month</span></div>
+                    <p class="text-slate-400">Billed monthly. Cancel anytime.</p>
+                </div>
+
+                <a href="https://buy.stripe.com/mcpsuperhero" class="btn-primary text-white w-full py-3 rounded-lg font-semibold text-center block mb-8">
+                    Start Free Trial
+                </a>
+
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Real-time server monitoring</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Usage analytics & reporting</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Error tracking & smart alerts</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Performance optimization tools</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Cost management & forecasting</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Multi-server unified dashboard</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Team collaboration & sharing</span>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>Unlimited servers & API calls</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4 bg-slate-900">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Loved by MCP Developers</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-slate-300 mb-6">
+                        "MCPSuperHero cut our MCP infrastructure costs by 45% in the first month. The insights are invaluable for optimizing our tool calls."
+                    </p>
+                    <div>
+                        <p class="font-semibold">Sarah Chen</p>
+                        <p class="text-sm text-slate-400">CTO, DataFlow AI</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-slate-300 mb-6">
+                        "The real-time error tracking saved us hours of debugging. We caught a critical issue before it impacted production."
+                    </p>
+                    <div>
+                        <p class="font-semibold">Marcus Johnson</p>
+                        <p class="text-sm text-slate-400">Platform Engineer, ModelLabs</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
+                    <p class="text-slate-300 mb-6">
+                        "Easy to set up, powerful insights, and the support team is incredibly responsive. Worth every penny."
+                    </p>
+                    <div>
+                        <p class="font-semibold">Elena Rodriguez</p>
+                        <p class="text-sm text-slate-400">Founder, ToolBuilder Pro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item py-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-1">
+                        <h3 class="text-xl font-bold">What is Model Context Protocol (MCP)?</h3>
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-1" class="faq-content hidden mt-4 text-slate-400">
+                        Model Context Protocol is an open protocol that enables AI applications to interact with external tools and data sources. MCPSuperHero specializes in monitoring and optimizing MCP server performance.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item py-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-2">
+                        <h3 class="text-xl font-bold">How long does it take to set up?</h3>
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-2" class="faq-content hidden mt-4 text-slate-400">
+                        Setup takes just 2 minutes. Generate an API key in MCPSuperHero, add it to your MCP server configuration, and you're instantly monitoring. Our dashboard appears immediately with real-time data.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item py-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-3">
+                        <h3 class="text-xl font-bold">Can I monitor multiple MCP servers?</h3>
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-3" class="faq-content hidden mt-4 text-slate-400">
+                        Absolutely. All plans include unlimited server monitoring. Add as many MCP servers as you need to your unified dashboard at no additional cost.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item py-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-4">
+                        <h3 class="text-xl font-bold">Is my data secure?</h3>
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-4" class="faq-content hidden mt-4 text-slate-400">
+                        Yes. All data is encrypted in transit and at rest. We comply with GDPR, SOC 2, and other privacy standards. We never store your actual tool call data—only metrics and analytics.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item py-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-5">
+                        <h3 class="text-xl font-bold">Can I cancel anytime?</h3>
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-5" class="faq-content hidden mt-4 text-slate-400">
+                        Yes, completely. Cancel your subscription anytime with no penalties or long-term contracts. Your data remains accessible for 30 days after cancellation.
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item py-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-6">
+                        <h3 class="text-xl font-bold">Do you offer API access?</h3>
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-6" class="faq-content hidden mt-4 text-slate-400">
+                        Yes. All customers get full REST API access to their monitoring data, enabling you to integrate insights into your existing tools and workflows.
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item py-6">
+                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-7">
+                        <h3 class="text-xl font-bold">What kind of support do you provide?</h3>
+                        <span class="text-2xl">+</span>
+                    </button>
+                    <div id="faq-7" class="faq-content hidden mt-4 text-slate-400">
+                        Email support is included with all plans. We respond within 24 hours. Premium support with Slack integration and phone support is available for enterprise customers.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="py-20 px-4 bg-gradient-to-r from-blue-900/20 to-violet-900/20 border-y border-slate-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Optimize Your MCP Infrastructure?</h2>
+            <p class="text-xl text-slate-300 mb-8">
+                Join 1000+ teams already monitoring their MCP servers with MCPSuperHero.
+            </p>
+            <a href="https://buy.stripe.com/mcpsuperhero" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-block">
+                Start Free Trial
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <!-- Brand -->
+                <div>
+                    <span class="text-2xl font-bold gradient-text">MCPSuperHero</span>
+                    <p class="text-slate-400 mt-4">MCP Analytics & Monitoring Platform</p>
+                    <p class="text-slate-500 text-sm mt-4">A TheAISuperHeroes company</p>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h4 class="font-bold mb-4">Products</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="https://resumesuperhero.com" class="hover:text-blue-400 transition">Resume SuperHero</a></li>
+                        <li><a href="https://theaisuperheroes.com" class="hover:text-blue-400 transition">TheAISuperHeroes</a></li>
+                        <li><a href="https://seoaisuperhero.com" class="hover:text-blue-400 transition">SEOAISuperHero</a></li>
+                        <li><a href="https://shopifysuperhero.com" class="hover:text-blue-400 transition">ShopifySuperHero</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">MCPSuperHero</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="#features" class="hover:text-blue-400 transition">Features</a></li>
+                        <li><a href="#how-it-works" class="hover:text-blue-400 transition">How It Works</a></li>
+                        <li><a href="#faq" class="hover:text-blue-400 transition">FAQ</a></li>
+                        <li><a href="mailto:partners@theaisuperheroes.com" class="hover:text-blue-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li><a href="privacy.html" class="hover:text-blue-400 transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-blue-400 transition">Terms of Service</a></li>
+                        <li><a href="cookies.html" class="hover:text-blue-400 transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-800 pt-8">
+                <p class="text-center text-slate-500 text-sm">
+                    &copy; 2026 TheAISuperHeroes. MCPSuperHero is a TheAISuperHeroes company.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // FAQ toggle functionality
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const targetId = toggle.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+                const isHidden = content.classList.contains('hidden');
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-content').forEach(item => {
+                    item.classList.add('hidden');
+                });
+                document.querySelectorAll('.faq-toggle span').forEach(span => {
+                    span.textContent = '+';
+                });
+
+                // Toggle current FAQ
+                if (isHidden) {
+                    content.classList.remove('hidden');
+                    toggle.querySelector('span').textContent = '−';
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
