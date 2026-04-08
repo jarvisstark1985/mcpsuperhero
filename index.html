@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MCPSuperHero - MCP Analytics & Monitoring Platform</title>
-    <meta name="description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics, error tracking, and cost management. Start free today.">
-    <meta name="keywords" content="MCP monitoring, Model Context Protocol, analytics, performance tracking, cost management">
+    <meta name="description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics, error tracking, and cost management. Start today.">
 
     <!-- Open Graph -->
     <meta property="og:title" content="MCPSuperHero - MCP Analytics & Monitoring Platform">
-    <meta property="og:description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics and cost management.">
+    <meta property="og:description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics, error tracking, and cost management. Start today.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mcpsuperhero.com">
     <meta property="og:image" content="https://mcpsuperhero.com/og-image.jpg">
@@ -17,8 +16,14 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MCPSuperHero - MCP Analytics & Monitoring Platform">
-    <meta name="twitter:description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics and cost management.">
+    <meta name="twitter:description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics, error tracking, and cost management. Start today.">
     <meta name="twitter:image" content="https://mcpsuperhero.com/og-image.jpg">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
@@ -26,8 +31,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "MCPSuperHero",
-        "description": "MCP Analytics & Monitoring Platform for tracking, monitoring, and optimizing Model Context Protocol servers",
-        "url": "https://mcpsuperhero.com",
+        "description": "MCP Analytics & Monitoring Platform for real-time server monitoring and optimization",
         "applicationCategory": "BusinessApplication",
         "offers": {
             "@type": "Offer",
@@ -35,32 +39,46 @@
             "priceCurrency": "USD",
             "priceValidUntil": "2026-12-31"
         },
-        "creator": {
-            "@type": "Organization",
-            "name": "TheAISuperHeroes",
-            "url": "https://theaisuperheroes.com"
+        "url": "https://mcpsuperhero.com",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "147"
         }
     }
     </script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2C3KN7T');</script>
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVV7C7Y5YY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-RVV7C7Y5YY');
+    </script>
+
     <style>
-        :root {
-            --brand-blue: #2563eb;
-            --brand-violet: #7c3aed;
-            --brand-amber: #fbbf24;
-            --dark-bg: #0f172a;
-            --dark-card: #1e293b;
-            --dark-border: #334155;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark-bg);
+            background-color: #0a0e1a;
             color: #e2e8f0;
+            line-height: 1.6;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -69,95 +87,262 @@
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, var(--brand-blue), var(--brand-violet));
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
         .gradient-border {
-            border-image: linear-gradient(135deg, var(--brand-blue), var(--brand-violet)) 1;
+            position: relative;
+            border: 1px solid transparent;
+            background: linear-gradient(#111827, #111827) padding-box,
+                        linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) border-box;
         }
 
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.1);
+        .card-bg {
+            background-color: #111827;
+            border-color: #1e293b;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--brand-blue), var(--brand-violet));
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
             transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
         }
 
         .btn-secondary {
-            border: 2px solid var(--brand-blue);
-            color: var(--brand-blue);
+            background-color: transparent;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #1e293b;
+            border-radius: 0.5rem;
+            font-weight: 600;
             transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .btn-secondary:hover {
-            background: rgba(37, 99, 235, 0.1);
+            border-color: #6366f1;
+            color: #6366f1;
         }
 
-        nav {
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--dark-border);
-        }
-
-        .hero-gradient {
-            background: radial-gradient(ellipse at center, rgba(37, 99, 235, 0.15) 0%, transparent 70%);
-        }
-
-        .stat-box {
-            background-color: var(--dark-card);
-            border: 1px solid var(--dark-border);
-            padding: 1.5rem;
-            border-radius: 0.75rem;
+        .feature-icon-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         .feature-card {
-            background-color: var(--dark-card);
-            border: 1px solid var(--dark-border);
-            border-radius: 0.75rem;
+            background-color: #111827;
+            border: 1px solid #1e293b;
             padding: 2rem;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: #6366f1;
+            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+        }
+
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            color: #6366f1;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .avatar-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            border: 2px solid #1e293b;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .avatar-circle:not(:first-child) {
+            margin-left: -0.75rem;
+        }
+
+        .social-proof {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .checkmark-svg {
+            width: 20px;
+            height: 20px;
+            color: #10b981;
+            flex-shrink: 0;
+        }
+
+        .gradient-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
         }
 
         .testimonial-card {
-            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
-            border: 1px solid var(--dark-border);
-            border-radius: 0.75rem;
+            background-color: #111827;
+            border: 1px solid #1e293b;
             padding: 2rem;
+            border-radius: 0.75rem;
+            transition: all 0.3s ease;
         }
 
-        .faq-item {
-            border-bottom: 1px solid var(--dark-border);
+        .testimonial-card:hover {
+            border-color: #6366f1;
         }
 
-        .faq-item:last-child {
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 0.25rem;
+            color: #fbbf24;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #1e293b;
+            padding: 1.5rem 0;
+        }
+
+        .accordion-item:last-child {
             border-bottom: none;
+        }
+
+        .accordion-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            user-select: none;
+            font-weight: 600;
+            color: #e2e8f0;
+        }
+
+        .accordion-summary:hover {
+            color: #6366f1;
+        }
+
+        details summary {
+            outline: none;
+            list-style: none;
+        }
+
+        details summary::marker {
+            display: none;
+        }
+
+        .accordion-toggle {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        details[open] .accordion-toggle {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            margin-top: 1rem;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        .nav-link {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #6366f1;
         }
 
         .mobile-menu {
             display: none;
-            position: fixed;
-            top: 0;
+            position: absolute;
+            top: 100%;
             left: 0;
             right: 0;
-            bottom: 0;
-            background-color: var(--dark-bg);
-            z-index: 50;
+            background-color: #111827;
+            border-top: 1px solid #1e293b;
             flex-direction: column;
-            padding: 6rem 2rem 2rem;
+            gap: 1rem;
+            padding: 2rem;
+            z-index: 50;
         }
 
         .mobile-menu.active {
@@ -167,28 +352,18 @@
         .hamburger {
             display: none;
             flex-direction: column;
+            gap: 0.5rem;
             cursor: pointer;
-            z-index: 51;
+            background: none;
+            border: none;
+            color: white;
         }
 
         .hamburger span {
             width: 24px;
             height: 2px;
-            background-color: #e2e8f0;
-            margin: 4px 0;
+            background-color: white;
             transition: all 0.3s ease;
-        }
-
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(10px, 10px);
-        }
-
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -7px);
         }
 
         @media (max-width: 768px) {
@@ -196,545 +371,898 @@
                 display: flex;
             }
 
-            .desktop-menu {
+            .nav-items {
                 display: none;
             }
+
+            .mobile-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+        }
+
+        .dashboard-mockup {
+            background: linear-gradient(135deg, #1e293b 0%, #111827 100%);
+            border: 1px solid #1e293b;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #6366f1, transparent);
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .dashboard-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            color: #6366f1;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #10b981;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .metric-box {
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .metric-bar {
+            height: 4px;
+            background-color: #1e293b;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 0.5rem;
+        }
+
+        .metric-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            border-radius: 2px;
+        }
+
+        .server-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .server-item:last-child {
+            border-bottom: none;
+        }
+
+        .server-name {
+            font-size: 0.875rem;
+            color: #cbd5e1;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .server-status {
+            font-size: 0.75rem;
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+        }
+
+        .section-heading p {
+            font-size: 1.125rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background-color: #111827;
+            border: 2px solid #1e293b;
+            padding: 3rem;
+            border-radius: 0.75rem;
+            max-width: 500px;
+            margin: 0 auto;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            border-color: #6366f1;
+            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+        }
+
+        .pricing-header {
+            margin-bottom: 2rem;
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+        }
+
+        .price-currency {
+            font-size: 1.5rem;
+        }
+
+        .price-period {
+            color: #94a3b8;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        .pricing-description {
+            color: #cbd5e1;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .feature-list svg {
+            width: 20px;
+            height: 20px;
+            color: #10b981;
+            flex-shrink: 0;
+        }
+
+        .replit-perk {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .replit-perk-icon {
+            font-size: 1.5rem;
+        }
+
+        .replit-perk-text {
+            color: #cbd5e1;
+            font-size: 0.875rem;
+        }
+
+        .replit-perk-highlight {
+            color: #6366f1;
+            font-weight: 600;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+            border-top: 1px solid #1e293b;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+            color: #e2e8f0;
+        }
+
+        .footer-link {
+            display: block;
+            color: #94a3b8;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-link:hover {
+            color: #6366f1;
+        }
+
+        .floating-box {
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
     </style>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P2C3KN7T');</script>
-
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVV7C7Y5YY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-RVV7C7Y5YY');
-    </script>
 </head>
-<body class="bg-slate-950">
+<body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Navigation -->
-    <nav class="fixed w-full top-0 z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="#" class="flex items-center space-x-2">
-                    <span class="text-2xl font-bold gradient-text">MCPSuperHero</span>
-                </a>
+    <nav class="fixed top-0 left-0 right-0 bg-[#0a0e1a] border-b border-[#1e293b] z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <span class="text-2xl">⚡</span>
+                <span class="text-white font-bold text-lg">MCPSuper<span class="italic gradient-text">Hero</span></span>
+            </a>
 
-                <div class="desktop-menu hidden md:flex items-center space-x-8">
-                    <a href="#features" class="hover:text-blue-400 transition">Features</a>
-                    <a href="#how-it-works" class="hover:text-blue-400 transition">How It Works</a>
-                    <a href="#pricing" class="hover:text-blue-400 transition">Pricing</a>
-                    <a href="#faq" class="hover:text-blue-400 transition">FAQ</a>
-                </div>
-
-                <div class="hidden md:block">
-                    <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-white px-6 py-2 rounded-lg font-semibold">
-                        Get Started
-                    </a>
-                </div>
-
-                <div class="hamburger md:hidden" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+            <!-- Desktop Nav Items -->
+            <div class="nav-items hidden md:flex items-center gap-8">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#testimonials" class="nav-link">Testimonials</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#faq" class="nav-link">FAQ</a>
             </div>
+
+            <!-- CTA Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+                <a href="https://mcpsuperhero.com/login" class="nav-link">Log in</a>
+                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary">Get Started</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="hamburger md:hidden">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
 
-        <div class="mobile-menu" id="mobile-menu">
-            <a href="#features" class="py-3 text-lg hover:text-blue-400 transition">Features</a>
-            <a href="#how-it-works" class="py-3 text-lg hover:text-blue-400 transition">How It Works</a>
-            <a href="#pricing" class="py-3 text-lg hover:text-blue-400 transition">Pricing</a>
-            <a href="#faq" class="py-3 text-lg hover:text-blue-400 transition">FAQ</a>
-            <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold mt-4 text-center">
-                Get Started
-            </a>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu md:hidden">
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
+            <a href="#pricing" class="nav-link">Pricing</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="https://mcpsuperhero.com/login" class="nav-link">Log in</a>
+            <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary w-full text-center">Get Started</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 hero-gradient relative overflow-hidden">
-        <div class="max-w-5xl mx-auto text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">
-                Monitor Your MCP Servers Like a <span class="gradient-text">SuperHero</span>
-            </h1>
-            <p class="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Real-time monitoring, usage analytics, performance optimization, and error tracking for your Model Context Protocol infrastructure. Reduce costs by 40% and gain complete visibility.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-block">
-                    Start Free Trial
-                </a>
-                <a href="#how-it-works" class="btn-secondary px-8 py-3 rounded-lg font-semibold inline-block">
-                    Learn More
-                </a>
-            </div>
-        </div>
-    </section>
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0e1a] to-[#111827]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Content -->
+                <div>
+                    <div class="status-pill">
+                        <span>⚡</span>
+                        <span>MCP Analytics Platform · $9.99/mo</span>
+                    </div>
 
-    <!-- Stats Strip -->
-    <section class="bg-slate-900 py-12 px-4 border-y border-slate-800">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="text-3xl font-bold gradient-text mb-2">1,000+</div>
-                    <p class="text-slate-400">MCP Servers Monitored</p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Monitor Your <span class="gradient-text">MCP Infrastructure</span> in Real-Time
+                    </h1>
+
+                    <p class="text-lg text-gray-400 mb-8 max-w-xl">
+                        Real-time analytics, performance optimization, and error tracking for your Model Context Protocol servers. Built for developers who care about reliability.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-center">
+                            Subscribe Now →
+                        </a>
+                        <button class="btn-secondary text-center">
+                            See Demo
+                        </button>
+                    </div>
+
+                    <div class="social-proof">
+                        <div class="flex items-center -space-x-2">
+                            <div class="avatar-circle">A</div>
+                            <div class="avatar-circle">B</div>
+                            <div class="avatar-circle">C</div>
+                            <div class="avatar-circle">+</div>
+                        </div>
+                        <span class="text-gray-400 text-sm">148+ developers trust MCPSuperHero</span>
+                        <span class="text-yellow-400">★★★★★</span>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold gradient-text mb-2">99.9%</div>
-                    <p class="text-slate-400">Uptime Detection</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold gradient-text mb-2">50M+</div>
-                    <p class="text-slate-400">Tool Calls Tracked</p>
-                </div>
-                <div class="text-center">
-                    <div class="text-3xl font-bold gradient-text mb-2">40%</div>
-                    <p class="text-slate-400">Avg Cost Reduction</p>
+
+                <!-- Right - Dashboard Mockup -->
+                <div class="floating-box">
+                    <div class="dashboard-mockup">
+                        <div class="dashboard-header">
+                            <div class="dashboard-title">MCP Server Status</div>
+                            <div class="status-indicator"></div>
+                        </div>
+
+                        <div class="metric-box">
+                            <div class="metric-label">Overall Uptime</div>
+                            <div class="metric-value">99.98%</div>
+                            <div class="metric-bar">
+                                <div class="metric-bar-fill" style="width: 99.98%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric-box">
+                            <div class="metric-label">Avg Latency</div>
+                            <div class="metric-value">48ms</div>
+                            <div class="metric-bar">
+                                <div class="metric-bar-fill" style="width: 65%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="metric-box">
+                            <div class="metric-label">Active Servers</div>
+                            <div class="metric-value">12</div>
+                        </div>
+
+                        <div class="metric-label" style="margin-bottom: 1rem;">Server Details</div>
+                        <div class="server-item">
+                            <span class="server-name">
+                                <span>●</span> prod-api-01
+                            </span>
+                            <span class="server-status">ACTIVE</span>
+                        </div>
+                        <div class="server-item">
+                            <span class="server-name">
+                                <span>●</span> prod-api-02
+                            </span>
+                            <span class="server-status">ACTIVE</span>
+                        </div>
+                        <div class="server-item">
+                            <span class="server-name">
+                                <span>●</span> backup-01
+                            </span>
+                            <span class="server-status">ACTIVE</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">Powerful Features</h2>
-            <p class="text-center text-slate-400 mb-16 max-w-2xl mx-auto">
-                Everything you need to monitor, analyze, and optimize your MCP servers
-            </p>
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0e1a]">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-heading">
+                <h2>Powerful Features for MCP Management</h2>
+                <p>Everything you need to monitor, optimize, and scale your Model Context Protocol infrastructure</p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Feature 1 -->
-                <div class="feature-card card-hover">
-                    <div class="text-4xl mb-4">📊</div>
-                    <h3 class="text-xl font-bold mb-3">Real-Time Server Monitoring</h3>
-                    <p class="text-slate-400">Live status dashboards, uptime alerts, and latency tracking. Know exactly when and where issues occur.</p>
+                <div class="feature-card">
+                    <div class="feature-icon-circle mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 2.2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Real-Time Server Monitoring</h3>
+                    <p class="text-gray-400">Watch server performance metrics update in real-time with live dashboards and instant notifications.</p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div class="feature-card card-hover">
-                    <div class="text-4xl mb-4">📈</div>
-                    <h3 class="text-xl font-bold mb-3">Usage Analytics</h3>
-                    <p class="text-slate-400">Track tool call volume, understand user patterns, and identify peak usage periods with detailed breakdowns.</p>
+                <div class="feature-card">
+                    <div class="feature-icon-circle mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="2" x2="12" y2="22"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Usage Analytics</h3>
+                    <p class="text-gray-400">Track API calls, token usage, and request patterns to understand your infrastructure costs.</p>
                 </div>
 
                 <!-- Feature 3 -->
-                <div class="feature-card card-hover">
-                    <div class="text-4xl mb-4">⚡</div>
-                    <h3 class="text-xl font-bold mb-3">Performance Optimization</h3>
-                    <p class="text-slate-400">Response time analysis, bottleneck detection, and intelligent caching recommendations.</p>
+                <div class="feature-card">
+                    <div class="feature-icon-circle mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h18M3 6h18M3 18h18"></path>
+                            <circle cx="12" cy="12" r="9"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Performance Optimization</h3>
+                    <p class="text-gray-400">Get AI-powered recommendations to optimize latency, reduce costs, and improve server efficiency.</p>
                 </div>
 
                 <!-- Feature 4 -->
-                <div class="feature-card card-hover">
-                    <div class="text-4xl mb-4">🚨</div>
-                    <h3 class="text-xl font-bold mb-3">Error Tracking & Alerts</h3>
-                    <p class="text-slate-400">Real-time error detection with stack trace analysis and smart alerting to catch issues fast.</p>
+                <div class="feature-card">
+                    <div class="feature-icon-circle mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Error Tracking & Alerts</h3>
+                    <p class="text-gray-400">Catch errors before your users do with intelligent error detection and instant alert notifications.</p>
                 </div>
 
                 <!-- Feature 5 -->
-                <div class="feature-card card-hover">
-                    <div class="text-4xl mb-4">💰</div>
-                    <h3 class="text-xl font-bold mb-3">Cost Management</h3>
-                    <p class="text-slate-400">Token usage tracking, cost per tool call analysis, and budget alerts with forecasting.</p>
+                <div class="feature-card">
+                    <div class="feature-icon-circle mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M2 12h20"></path>
+                            <circle cx="12" cy="12" r="10"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Cost Management</h3>
+                    <p class="text-gray-400">Monitor spending patterns, set budgets, and receive alerts before you exceed cost thresholds.</p>
                 </div>
 
                 <!-- Feature 6 -->
-                <div class="feature-card card-hover">
-                    <div class="text-4xl mb-4">🎯</div>
-                    <h3 class="text-xl font-bold mb-3">Multi-Server Dashboard</h3>
-                    <p class="text-slate-400">Unified view of all your MCP servers, compare performance, and share with your team.</p>
+                <div class="feature-card">
+                    <div class="feature-icon-circle mb-4">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Multi-Server Dashboard</h3>
+                    <p class="text-gray-400">Manage unlimited servers from a single unified dashboard with customizable views and filters.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 px-4 bg-slate-900">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">How It Works</h2>
+    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0e1a] to-[#111827]">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-heading">
+                <h2>Get Started in 3 Steps</h2>
+                <p>Start monitoring your MCP infrastructure within minutes</p>
+            </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Step 1 -->
                 <div class="text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 text-white text-2xl font-bold mb-6">
-                        1
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Connect</h3>
-                    <p class="text-slate-400">
-                        Connect your MCP servers to MCPSuperHero with a simple API key. Takes less than 2 minutes to set up.
-                    </p>
+                    <div class="gradient-number mb-6 mx-auto">1</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Connect Your Servers</h3>
+                    <p class="text-gray-400">Use our simple API key integration or click-to-connect options to link your MCP servers to MCPSuperHero.</p>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-violet-600 text-white text-2xl font-bold mb-6">
-                        2
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Monitor</h3>
-                    <p class="text-slate-400">
-                        Watch real-time metrics, usage patterns, and performance data flow into your unified dashboard instantly.
-                    </p>
+                    <div class="gradient-number mb-6 mx-auto">2</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Monitor in Real-Time</h3>
+                    <p class="text-gray-400">Watch your infrastructure metrics come to life with live dashboards, charts, and performance insights.</p>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="text-center">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-amber-500 text-white text-2xl font-bold mb-6">
-                        3
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Optimize</h3>
-                    <p class="text-slate-400">
-                        Use insights to optimize performance, reduce costs, and improve your MCP infrastructure continuously.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">Simple, Transparent Pricing</h2>
-            <p class="text-center text-slate-400 mb-16">
-                One powerful plan with all features included. No hidden fees.
-            </p>
-
-            <div class="feature-card border-2 border-blue-600 relative">
-                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
-                </div>
-
-                <div class="mb-8">
-                    <div class="text-5xl font-bold mb-2">$9.99<span class="text-2xl text-slate-400">/month</span></div>
-                    <p class="text-slate-400">Billed monthly. Cancel anytime.</p>
-                </div>
-
-                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-white w-full py-3 rounded-lg font-semibold text-center block mb-8">
-                    Start Free Trial
-                </a>
-
-                <div class="space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Real-time server monitoring</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Usage analytics & reporting</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Error tracking & smart alerts</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Performance optimization tools</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Cost management & forecasting</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Multi-server unified dashboard</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Team collaboration & sharing</span>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
-                        </svg>
-                        <span>Unlimited servers & API calls</span>
-                    </div>
+                    <div class="gradient-number mb-6 mx-auto">3</div>
+                    <h3 class="text-xl font-bold text-white mb-3">Optimize & Scale</h3>
+                    <p class="text-gray-400">Use AI-powered recommendations to optimize performance, reduce costs, and scale confidently.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-20 px-4 bg-slate-900">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Loved by MCP Developers</h2>
+    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0e1a]">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-heading">
+                <h2>Loved by MCP Developers</h2>
+                <p>See what developers are saying about MCPSuperHero</p>
+            </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- Testimonial 1 -->
                 <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <span class="text-yellow-400">★★★★★</span>
+                    <div class="star-rating mb-3">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
-                    <p class="text-slate-300 mb-6">
-                        "MCPSuperHero cut our MCP infrastructure costs by 45% in the first month. The insights are invaluable for optimizing our tool calls."
-                    </p>
-                    <div>
-                        <p class="font-semibold">Sarah Chen</p>
-                        <p class="text-sm text-slate-400">CTO, DataFlow AI</p>
+                    <p class="text-gray-300 mb-4">"MCPSuperHero has been a game-changer for monitoring our MCP infrastructure. The real-time alerts saved us from a major incident last week."</p>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AC</div>
+                        <div>
+                            <p class="text-white font-bold">Alex Chen</p>
+                            <p class="text-gray-400 text-sm">CTO, API Labs</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 2 -->
                 <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <span class="text-yellow-400">★★★★★</span>
+                    <div class="star-rating mb-3">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
-                    <p class="text-slate-300 mb-6">
-                        "The real-time error tracking saved us hours of debugging. We caught a critical issue before it impacted production."
-                    </p>
-                    <div>
-                        <p class="font-semibold">Marcus Johnson</p>
-                        <p class="text-sm text-slate-400">Platform Engineer, ModelLabs</p>
+                    <p class="text-gray-300 mb-4">"The cost management features helped us reduce our MCP spending by 30%. Simple, effective, and incredibly valuable for our team."</p>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">SR</div>
+                        <div>
+                            <p class="text-white font-bold">Sarah Rodriguez</p>
+                            <p class="text-gray-400 text-sm">DevOps Lead, CloudSync</p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Testimonial 3 -->
                 <div class="testimonial-card">
-                    <div class="flex items-center mb-4">
-                        <span class="text-yellow-400">★★★★★</span>
+                    <div class="star-rating mb-3">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
-                    <p class="text-slate-300 mb-6">
-                        "Easy to set up, powerful insights, and the support team is incredibly responsive. Worth every penny."
-                    </p>
-                    <div>
-                        <p class="font-semibold">Elena Rodriguez</p>
-                        <p class="text-sm text-slate-400">Founder, ToolBuilder Pro</p>
+                    <p class="text-gray-300 mb-4">"At $9.99/month, this is a steal. The dashboard is intuitive, support is responsive, and the features keep improving. Highly recommend!"</p>
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">DJ</div>
+                        <div>
+                            <p class="text-white font-bold">David Jung</p>
+                            <p class="text-gray-400 text-sm">Engineering Manager, ModelWorks</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0e1a] to-[#111827]">
+        <div class="max-w-7xl mx-auto">
+            <div class="section-heading">
+                <h2>Simple, Transparent Pricing</h2>
+                <p>One plan. All features. Scale as you grow.</p>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <div class="price-amount">
+                        <span class="price-currency">$</span>
+                        <span>9.99</span>
+                        <span class="price-period">/month</span>
+                    </div>
+                    <p class="pricing-description">Billed monthly. Cancel anytime.</p>
+                </div>
+
+                <ul class="feature-list">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        <span>Real-time server monitoring for unlimited servers</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        <span>Advanced usage analytics & cost tracking</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        <span>Error detection & instant alerts</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        <span>Performance optimization recommendations</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        <span>Unified multi-server dashboard</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        <span>REST API access for integrations</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        <span>Email & community support</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
+                        </svg>
+                        <span>Custom alert thresholds & rules</span>
+                    </li>
+                </ul>
+
+                <div class="replit-perk">
+                    <div class="replit-perk-icon">🚀</div>
+                    <div class="replit-perk-text">
+                        <span class="replit-perk-highlight">Subscribers get 1 free month of Replit!</span> Bonus value for MCPSuperHero members.
+                    </div>
+                </div>
+
+                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary w-full text-center block">
+                    Subscribe Now
+                </a>
+
+                <p class="text-center text-gray-400 text-sm mt-4">
+                    Cancel anytime. No contracts or hidden fees.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 px-4">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0e1a]">
+        <div class="max-w-4xl mx-auto">
+            <div class="section-heading">
+                <h2>Frequently Asked Questions</h2>
+                <p>Everything you need to know about MCPSuperHero</p>
+            </div>
 
-            <div class="space-y-6">
+            <div>
                 <!-- FAQ 1 -->
-                <div class="faq-item py-6">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-1">
-                        <h3 class="text-xl font-bold">What is Model Context Protocol (MCP)?</h3>
-                        <span class="text-2xl">+</span>
-                    </button>
-                    <div id="faq-1" class="faq-content hidden mt-4 text-slate-400">
-                        Model Context Protocol is an open protocol that enables AI applications to interact with external tools and data sources. MCPSuperHero specializes in monitoring and optimizing MCP server performance.
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <span>What is Model Context Protocol (MCP)?</span>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Model Context Protocol is a standardized framework for building AI applications that require context from multiple sources. MCPSuperHero helps you monitor, optimize, and scale MCP server infrastructure efficiently.</p>
                     </div>
-                </div>
+                </details>
 
                 <!-- FAQ 2 -->
-                <div class="faq-item py-6">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-2">
-                        <h3 class="text-xl font-bold">How long does it take to set up?</h3>
-                        <span class="text-2xl">+</span>
-                    </button>
-                    <div id="faq-2" class="faq-content hidden mt-4 text-slate-400">
-                        Setup takes just 2 minutes. Generate an API key in MCPSuperHero, add it to your MCP server configuration, and you're instantly monitoring. Our dashboard appears immediately with real-time data.
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <span>How long does setup take?</span>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Most users have MCPSuperHero up and running within 5-10 minutes. Simply generate an API key, add it to your MCP servers, and start monitoring. We provide step-by-step setup guides for all major frameworks.</p>
                     </div>
-                </div>
+                </details>
 
                 <!-- FAQ 3 -->
-                <div class="faq-item py-6">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-3">
-                        <h3 class="text-xl font-bold">Can I monitor multiple MCP servers?</h3>
-                        <span class="text-2xl">+</span>
-                    </button>
-                    <div id="faq-3" class="faq-content hidden mt-4 text-slate-400">
-                        Absolutely. All plans include unlimited server monitoring. Add as many MCP servers as you need to your unified dashboard at no additional cost.
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <span>Can I monitor multiple servers with one account?</span>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Yes! MCPSuperHero is built for unlimited server monitoring. Add as many servers as you need to your account, manage them all from a single unified dashboard, and set up different alert rules for each.</p>
                     </div>
-                </div>
+                </details>
 
                 <!-- FAQ 4 -->
-                <div class="faq-item py-6">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-4">
-                        <h3 class="text-xl font-bold">Is my data secure?</h3>
-                        <span class="text-2xl">+</span>
-                    </button>
-                    <div id="faq-4" class="faq-content hidden mt-4 text-slate-400">
-                        Yes. All data is encrypted in transit and at rest. We comply with GDPR, SOC 2, and other privacy standards. We never store your actual tool call data—only metrics and analytics.
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <span>Is my data secure?</span>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Security is our top priority. All data is encrypted in transit and at rest. We comply with industry standards including SOC 2 Type II, use secure API authentication, and never share your data with third parties.</p>
                     </div>
-                </div>
+                </details>
 
                 <!-- FAQ 5 -->
-                <div class="faq-item py-6">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-5">
-                        <h3 class="text-xl font-bold">Can I cancel anytime?</h3>
-                        <span class="text-2xl">+</span>
-                    </button>
-                    <div id="faq-5" class="faq-content hidden mt-4 text-slate-400">
-                        Yes, completely. Cancel your subscription anytime with no penalties or long-term contracts. Your data remains accessible for 30 days after cancellation.
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <span>Can I cancel my subscription anytime?</span>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Absolutely. You can cancel your subscription at any time from your account settings. No long-term contracts, no hidden fees. Your data will be available for 30 days after cancellation.</p>
                     </div>
-                </div>
+                </details>
 
                 <!-- FAQ 6 -->
-                <div class="faq-item py-6">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-6">
-                        <h3 class="text-xl font-bold">Do you offer API access?</h3>
-                        <span class="text-2xl">+</span>
-                    </button>
-                    <div id="faq-6" class="faq-content hidden mt-4 text-slate-400">
-                        Yes. All customers get full REST API access to their monitoring data, enabling you to integrate insights into your existing tools and workflows.
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <span>Is there API access for integrations?</span>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>Yes. MCPSuperHero includes a comprehensive REST API for retrieving metrics, managing alerts, and integrating with your existing tools. Full API documentation is available in your dashboard.</p>
                     </div>
-                </div>
+                </details>
 
                 <!-- FAQ 7 -->
-                <div class="faq-item py-6">
-                    <button class="faq-toggle w-full text-left flex justify-between items-center" data-target="faq-7">
-                        <h3 class="text-xl font-bold">What kind of support do you provide?</h3>
-                        <span class="text-2xl">+</span>
-                    </button>
-                    <div id="faq-7" class="faq-content hidden mt-4 text-slate-400">
-                        Email support is included with all plans. We respond within 24 hours. Premium support with Slack integration and phone support is available for enterprise customers.
+                <details class="accordion-item">
+                    <summary class="accordion-summary">
+                        <span>What kind of support do you offer?</span>
+                        <div class="accordion-toggle">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
+                    </summary>
+                    <div class="accordion-content">
+                        <p>All subscribers get email support and access to our community forum. We aim to respond to all inquiries within 24 hours. Priority support is available for enterprise customers.</p>
                     </div>
-                </div>
+                </details>
             </div>
         </div>
     </section>
 
     <!-- Final CTA Section -->
-    <section class="py-20 px-4 bg-gradient-to-r from-blue-900/20 to-violet-900/20 border-y border-slate-800">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#1e293b] to-[#111827] border-t border-[#1e293b]">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Optimize Your MCP Infrastructure?</h2>
-            <p class="text-xl text-slate-300 mb-8">
-                Join 1000+ teams already monitoring their MCP servers with MCPSuperHero.
-            </p>
-            <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-white px-8 py-3 rounded-lg font-semibold inline-block">
-                Start Free Trial
+            <h2 class="text-4xl font-bold text-white mb-6">Ready to Optimize Your MCP Infrastructure?</h2>
+            <p class="text-xl text-gray-400 mb-8">Join 148+ developers who trust MCPSuperHero for monitoring and optimization.</p>
+            <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary inline-block text-lg">
+                Get Started for $9.99/mo →
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 py-16 px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <!-- Brand -->
+    <footer class="bg-[#0a0e1a] border-t border-[#1e293b] px-4 sm:px-6 lg:px-8 py-16">
+        <div class="max-w-7xl mx-auto">
+            <div class="footer-grid">
+                <!-- Brand Column -->
                 <div>
-                    <span class="text-2xl font-bold gradient-text">MCPSuperHero</span>
-                    <p class="text-slate-400 mt-4">MCP Analytics & Monitoring Platform</p>
-                    <p class="text-slate-500 text-sm mt-4">A TheAISuperHeroes company</p>
+                    <div class="flex items-center gap-2 mb-4">
+                        <span class="text-2xl">⚡</span>
+                        <span class="text-white font-bold text-lg">MCPSuper<span class="italic gradient-text">Hero</span></span>
+                    </div>
+                    <p class="text-gray-400 text-sm">Monitor and optimize your MCP infrastructure with real-time analytics and error tracking.</p>
                 </div>
 
-                <!-- Products -->
+                <!-- Products Column -->
                 <div>
-                    <h4 class="font-bold mb-4">Products</h4>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="https://resumesuperhero.com" class="hover:text-blue-400 transition">Resume SuperHero</a></li>
-                        <li><a href="https://theaisuperheroes.com" class="hover:text-blue-400 transition">TheAISuperHeroes</a></li>
-                        <li><a href="https://seoaisuperhero.com" class="hover:text-blue-400 transition">SEOAISuperHero</a></li>
-                        <li><a href="https://shopifysuperhero.com" class="hover:text-blue-400 transition">ShopifySuperHero</a></li>
-                        <li><a href="#" class="hover:text-blue-400 transition">MCPSuperHero</a></li>
-                    </ul>
+                    <h4>Products</h4>
+                    <a href="https://resumesuperhero.com" class="footer-link">ResumeSuperHero</a>
+                    <a href="https://shopifysuperhero.com" class="footer-link">ShopifySuperHero</a>
+                    <a href="https://seoaisuperhero.com" class="footer-link">SEOAISuperHero</a>
+                    <a href="https://mcpsuperhero.com" class="footer-link">MCPSuperHero</a>
+                    <a href="https://theaisuperheroes.com" class="footer-link">TheAISuperheroes</a>
                 </div>
 
-                <!-- Company -->
+                <!-- Company Column -->
                 <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="#features" class="hover:text-blue-400 transition">Features</a></li>
-                        <li><a href="#how-it-works" class="hover:text-blue-400 transition">How It Works</a></li>
-                        <li><a href="#faq" class="hover:text-blue-400 transition">FAQ</a></li>
-                        <li><a href="mailto:partners@theaisuperheroes.com" class="hover:text-blue-400 transition">Contact</a></li>
-                    </ul>
+                    <h4>Company</h4>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Blog</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Contact</a>
                 </div>
 
-                <!-- Legal -->
+                <!-- Legal Column -->
                 <div>
-                    <h4 class="font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2 text-slate-400">
-                        <li><a href="privacy.html" class="hover:text-blue-400 transition">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-blue-400 transition">Terms of Service</a></li>
-                        <li><a href="cookies.html" class="hover:text-blue-400 transition">Cookie Policy</a></li>
-                    </ul>
+                    <h4>Legal</h4>
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                    <a href="#" class="footer-link">Security</a>
+                    <a href="#" class="footer-link">Compliance</a>
+                </div>
+
+                <!-- Connect Column -->
+                <div>
+                    <h4>Connect</h4>
+                    <a href="#" class="footer-link">Twitter</a>
+                    <a href="#" class="footer-link">GitHub</a>
+                    <a href="#" class="footer-link">Discord</a>
+                    <a href="mailto:support@mcpsuperhero.com" class="footer-link">Email Support</a>
                 </div>
             </div>
 
-            <div class="border-t border-slate-800 pt-8">
-                <p class="text-center text-slate-500 text-sm">
-                    &copy; 2026 TheAISuperHeroes. MCPSuperHero is a TheAISuperHeroes company.
-                </p>
+            <div class="border-t border-[#1e293b] mt-12 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2026 MCPSuperHero. All rights reserved. Built with &lt;3 for MCP developers.</p>
             </div>
         </div>
     </footer>
 
     <script>
         // Mobile menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('active');
         });
 
-        // Close mobile menu when a link is clicked
-        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        // FAQ toggle functionality
-        const faqToggles = document.querySelectorAll('.faq-toggle');
-        faqToggles.forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                const targetId = toggle.getAttribute('data-target');
-                const content = document.getElementById(targetId);
-                const isHidden = content.classList.contains('hidden');
-
-                // Close all other FAQs
-                document.querySelectorAll('.faq-content').forEach(item => {
-                    item.classList.add('hidden');
-                });
-                document.querySelectorAll('.faq-toggle span').forEach(span => {
-                    span.textContent = '+';
-                });
-
-                // Toggle current FAQ
-                if (isHidden) {
-                    content.classList.remove('hidden');
-                    toggle.querySelector('span').textContent = '−';
-                }
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                document.querySelector('.mobile-menu').classList.remove('active');
             });
         });
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Accordion details animation
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                if (this.open) {
+                    this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }
             });
         });
