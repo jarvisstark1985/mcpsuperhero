@@ -76,7 +76,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0a0e1a;
+            background-color: #0f172a;
             color: #e2e8f0;
             line-height: 1.6;
         }
@@ -87,30 +87,30 @@
         }
 
         .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #fbbf24 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
         .gradient-bg {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #fbbf24 100%);
         }
 
         .gradient-border {
             position: relative;
             border: 1px solid transparent;
-            background: linear-gradient(#111827, #111827) padding-box,
-                        linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) border-box;
+            background: linear-gradient(#1e293b, #1e293b) padding-box,
+                        linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #fbbf24 100%) border-box;
         }
 
         .card-bg {
-            background-color: #111827;
+            background-color: #1e293b;
             border-color: #1e293b;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
             color: white;
             padding: 0.75rem 1.5rem;
             border-radius: 0.5rem;
@@ -124,7 +124,7 @@
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
         }
 
         .btn-secondary {
@@ -141,15 +141,33 @@
         }
 
         .btn-secondary:hover {
-            border-color: #6366f1;
-            color: #6366f1;
+            border-color: #2563eb;
+            color: #2563eb;
+        }
+
+        .btn-secondary-green {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #6ee7b7;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary-green:hover {
+            border-color: rgba(16, 185, 129, 0.6);
+            color: #a7f3d0;
         }
 
         .feature-icon-circle {
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -157,8 +175,8 @@
         }
 
         .feature-card {
-            background-color: #111827;
-            border: 1px solid #1e293b;
+            background-color: #1e293b;
+            border: 1px solid rgba(124, 58, 237, 0.3);
             padding: 2rem;
             border-radius: 0.75rem;
             transition: all 0.3s ease;
@@ -166,19 +184,19 @@
 
         .feature-card:hover {
             transform: translateY(-4px);
-            border-color: #6366f1;
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
+            border-color: rgba(124, 58, 237, 0.6);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
         }
 
         .status-pill {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background-color: rgba(99, 102, 241, 0.1);
-            border: 1px solid rgba(99, 102, 241, 0.3);
-            color: #6366f1;
+            background-color: rgba(124, 58, 237, 0.2);
+            border: 1px solid rgba(124, 58, 237, 0.4);
+            color: #c4b5fd;
             padding: 0.5rem 1rem;
-            border-radius: 2rem;
+            border-radius: 9999px;
             font-size: 0.875rem;
             font-weight: 600;
             margin-bottom: 1rem;
@@ -188,7 +206,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
             border: 2px solid #1e293b;
             display: inline-flex;
             align-items: center;
@@ -220,7 +238,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -231,15 +249,15 @@
         }
 
         .testimonial-card {
-            background-color: #111827;
-            border: 1px solid #1e293b;
+            background-color: #1e293b;
+            border: 1px solid rgba(124, 58, 237, 0.3);
             padding: 2rem;
             border-radius: 0.75rem;
             transition: all 0.3s ease;
         }
 
         .testimonial-card:hover {
-            border-color: #6366f1;
+            border-color: rgba(124, 58, 237, 0.6);
         }
 
         .testimonial-header {
@@ -253,7 +271,7 @@
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -288,7 +306,7 @@
         }
 
         .accordion-summary:hover {
-            color: #6366f1;
+            color: #2563eb;
         }
 
         details summary {
@@ -321,14 +339,14 @@
         }
 
         .nav-link {
-            color: #e2e8f0;
+            color: #cbd5e1;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .nav-link:hover {
-            color: #6366f1;
+            color: #2563eb;
         }
 
         .mobile-menu {
@@ -337,7 +355,7 @@
             top: 100%;
             left: 0;
             right: 0;
-            background-color: #111827;
+            background-color: #1e293b;
             border-top: 1px solid #1e293b;
             flex-direction: column;
             gap: 1rem;
@@ -385,7 +403,7 @@
         }
 
         .dashboard-mockup {
-            background: linear-gradient(135deg, #1e293b 0%, #111827 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #1e293b 100%);
             border: 1px solid #1e293b;
             border-radius: 0.75rem;
             padding: 1.5rem;
@@ -400,7 +418,7 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #6366f1, transparent);
+            background: linear-gradient(90deg, transparent, #2563eb, transparent);
         }
 
         .dashboard-header {
@@ -415,7 +433,7 @@
         .dashboard-title {
             font-family: 'Space Grotesk', sans-serif;
             font-weight: 700;
-            color: #6366f1;
+            color: #2563eb;
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
@@ -463,7 +481,7 @@
 
         .metric-bar-fill {
             height: 100%;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            background: linear-gradient(90deg, #2563eb, #7c3aed);
             border-radius: 2px;
         }
 
@@ -512,8 +530,8 @@
         }
 
         .pricing-card {
-            background-color: #111827;
-            border: 2px solid #1e293b;
+            background-color: #1e293b;
+            border: 2px solid rgba(124, 58, 237, 0.3);
             padding: 3rem;
             border-radius: 0.75rem;
             max-width: 500px;
@@ -522,8 +540,8 @@
         }
 
         .pricing-card:hover {
-            border-color: #6366f1;
-            box-shadow: 0 30px 60px rgba(99, 102, 241, 0.2);
+            border-color: rgba(124, 58, 237, 0.6);
+            box-shadow: 0 30px 60px rgba(124, 58, 237, 0.2);
         }
 
         .pricing-header {
@@ -577,8 +595,8 @@
         }
 
         .replit-perk {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            border: 1px solid rgba(124, 58, 237, 0.3);
             border-radius: 0.5rem;
             padding: 1rem;
             margin: 1.5rem 0;
@@ -597,7 +615,7 @@
         }
 
         .replit-perk-highlight {
-            color: #6366f1;
+            color: #7c3aed;
             font-weight: 600;
         }
 
@@ -624,7 +642,7 @@
         }
 
         .footer-link:hover {
-            color: #6366f1;
+            color: #2563eb;
         }
 
         .floating-box {
@@ -643,7 +661,7 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-[#0a0e1a] border-b border-[#1e293b] z-40">
+    <nav class="fixed top-0 left-0 right-0 bg-[#0f172a] border-b border-[#1e293b] z-40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
             <!-- Logo -->
             <a href="#" class="flex items-center gap-2">
@@ -687,7 +705,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0e1a] to-[#111827]">
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Left Content -->
@@ -709,9 +727,9 @@
                         <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-center">
                             Subscribe Now →
                         </a>
-                        <button class="btn-secondary text-center">
-                            See Demo
-                        </button>
+                        <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-secondary-green text-center">
+                            + 1 Month Free Replit
+                        </a>
                     </div>
 
                     <div class="social-proof">
@@ -781,7 +799,7 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0e1a]">
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f172a]">
         <div class="max-w-7xl mx-auto">
             <div class="section-heading">
                 <h2>Powerful Features for MCP Management</h2>
@@ -867,7 +885,7 @@
     </section>
 
     <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0e1a] to-[#111827]">
+    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
         <div class="max-w-7xl mx-auto">
             <div class="section-heading">
                 <h2>Get Started in 3 Steps</h2>
@@ -900,7 +918,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0e1a]">
+    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f172a]">
         <div class="max-w-7xl mx-auto">
             <div class="section-heading">
                 <h2>Loved by MCP Developers</h2>
@@ -957,7 +975,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0a0e1a] to-[#111827]">
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
         <div class="max-w-7xl mx-auto">
             <div class="section-heading">
                 <h2>Simple, Transparent Pricing</h2>
@@ -1044,7 +1062,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0a0e1a]">
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f172a]">
         <div class="max-w-4xl mx-auto">
             <div class="section-heading">
                 <h2>Frequently Asked Questions</h2>
@@ -1161,7 +1179,7 @@
     </section>
 
     <!-- Final CTA Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#1e293b] to-[#111827] border-t border-[#1e293b]">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#1e293b] to-[#1e293b] border-t border-[#1e293b]">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-4xl font-bold text-white mb-6">Ready to Optimize Your MCP Infrastructure?</h2>
             <p class="text-xl text-gray-400 mb-8">Join 148+ developers who trust MCPSuperHero for monitoring and optimization.</p>
@@ -1172,7 +1190,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0a0e1a] border-t border-[#1e293b] px-4 sm:px-6 lg:px-8 py-16">
+    <footer class="bg-[#0f172a] border-t border-[#1e293b] px-4 sm:px-6 lg:px-8 py-16">
         <div class="max-w-7xl mx-auto">
             <div class="footer-grid">
                 <!-- Brand Column -->
