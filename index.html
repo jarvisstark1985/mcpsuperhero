@@ -3,49 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MCPSuperHero - MCP Analytics & Monitoring Platform</title>
-    <meta name="description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics, error tracking, and cost management. Start today.">
+    <title>MCP SuperHero - MCP Server Monitoring & Analytics at $9.99/mo</title>
+    <meta name="description" content="Monitor your MCP servers with real-time analytics, uptime tracking, and error detection. $9.99/mo + 1 month free Replit.">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="MCPSuperHero - MCP Analytics & Monitoring Platform">
-    <meta property="og:description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics, error tracking, and cost management. Start today.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mcpsuperhero.com">
-    <meta property="og:image" content="https://mcpsuperhero.com/og-image.jpg">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MCPSuperHero - MCP Analytics & Monitoring Platform">
-    <meta name="twitter:description" content="Monitor and optimize your Model Context Protocol servers with real-time analytics, error tracking, and cost management. Start today.">
-    <meta name="twitter:image" content="https://mcpsuperhero.com/og-image.jpg">
-
-    <!-- Fonts -->
+    <!-- Google Fonts CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "MCPSuperHero",
-        "description": "MCP Analytics & Monitoring Platform for real-time server monitoring and optimization",
-        "applicationCategory": "BusinessApplication",
-        "offers": {
-            "@type": "Offer",
-            "price": "9.99",
-            "priceCurrency": "USD",
-            "priceValidUntil": "2026-12-31"
-        },
-        "url": "https://mcpsuperhero.com",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "ratingCount": "147"
-        }
-    }
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVV7C7Y5YY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RVV7C7Y5YY');
     </script>
 
     <!-- Google Tag Manager -->
@@ -54,14 +27,6 @@
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-P2C3KN7T');</script>
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVV7C7Y5YY"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RVV7C7Y5YY');
-    </script>
 
     <style>
         * {
@@ -70,14 +35,10 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
+            background: #0f172a;
+            color: rgb(226, 232, 240);
             line-height: 1.6;
         }
 
@@ -93,704 +54,445 @@
             background-clip: text;
         }
 
-        .gradient-bg {
-            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #fbbf24 100%);
+        .hero-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
         }
 
-        .gradient-border {
-            position: relative;
-            border: 1px solid transparent;
-            background: linear-gradient(#1e293b, #1e293b) padding-box,
-                        linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #fbbf24 100%) border-box;
-        }
-
-        .card-bg {
-            background-color: #1e293b;
-            border-color: #1e293b;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.3);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: 2px solid #1e293b;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-secondary:hover {
-            border-color: #2563eb;
-            color: #2563eb;
-        }
-
-        .btn-secondary-green {
-            background-color: rgba(16, 185, 129, 0.15);
-            color: #6ee7b7;
-            padding: 0.75rem 1.5rem;
-            border: 1px solid rgba(16, 185, 129, 0.4);
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-secondary-green:hover {
-            border-color: rgba(16, 185, 129, 0.6);
-            color: #a7f3d0;
-        }
-
-        .feature-icon-circle {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .feature-card {
-            background-color: #1e293b;
-            border: 1px solid rgba(124, 58, 237, 0.3);
-            padding: 2rem;
-            border-radius: 0.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(124, 58, 237, 0.6);
-            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
-        }
-
-        .status-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background-color: rgba(124, 58, 237, 0.2);
-            border: 1px solid rgba(124, 58, 237, 0.4);
-            color: #c4b5fd;
-            padding: 0.5rem 1rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .avatar-circle {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            border: 2px solid #1e293b;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 0.875rem;
-        }
-
-        .avatar-circle:not(:first-child) {
-            margin-left: -0.75rem;
-        }
-
-        .social-proof {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .checkmark-svg {
-            width: 20px;
-            height: 20px;
-            color: #10b981;
-            flex-shrink: 0;
-        }
-
-        .gradient-number {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.25rem;
-            flex-shrink: 0;
-        }
-
-        .testimonial-card {
-            background-color: #1e293b;
-            border: 1px solid rgba(124, 58, 237, 0.3);
-            padding: 2rem;
-            border-radius: 0.75rem;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            border-color: rgba(124, 58, 237, 0.6);
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        .star-rating {
-            display: flex;
-            gap: 0.25rem;
-            color: #fbbf24;
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #1e293b;
-            padding: 1.5rem 0;
-        }
-
-        .accordion-item:last-child {
-            border-bottom: none;
-        }
-
-        .accordion-summary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;
-            user-select: none;
-            font-weight: 600;
-            color: #e2e8f0;
-        }
-
-        .accordion-summary:hover {
-            color: #2563eb;
-        }
-
-        details summary {
-            outline: none;
-            list-style: none;
-        }
-
-        details summary::marker {
-            display: none;
-        }
-
-        .accordion-toggle {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-        }
-
-        details[open] .accordion-toggle {
-            transform: rotate(180deg);
-        }
-
-        .accordion-content {
-            margin-top: 1rem;
-            color: #cbd5e1;
-            line-height: 1.7;
-        }
-
-        .nav-link {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #2563eb;
-        }
-
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: #1e293b;
-            border-top: 1px solid #1e293b;
-            flex-direction: column;
-            gap: 1rem;
-            padding: 2rem;
-            z-index: 50;
-        }
-
-        .mobile-menu.active {
-            display: flex;
-        }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 0.5rem;
-            cursor: pointer;
-            background: none;
-            border: none;
-            color: white;
-        }
-
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background-color: white;
-            transition: all 0.3s ease;
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-items {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: none;
-            }
-
-            .mobile-menu.active {
-                display: flex;
-            }
-        }
-
-        .dashboard-mockup {
-            background: linear-gradient(135deg, #1e293b 0%, #1e293b 100%);
-            border: 1px solid #1e293b;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
+        .hero-glow {
             position: relative;
             overflow: hidden;
         }
 
-        .dashboard-mockup::before {
+        .hero-glow::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, #2563eb, transparent);
+            bottom: 0;
+            background: radial-gradient(ellipse at 60% 50%, rgba(124,58,237,0.25) 0%, transparent 70%), radial-gradient(ellipse at 20% 80%, rgba(37,99,235,0.2) 0%, transparent 60%);
+            pointer-events: none;
         }
 
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .dashboard-title {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 700;
-            color: #2563eb;
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-
-        .status-indicator {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: #10b981;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .metric-box {
-            margin-bottom: 1.5rem;
-        }
-
-        .metric-label {
-            font-size: 0.75rem;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.5rem;
-        }
-
-        .metric-value {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: #e2e8f0;
-            font-family: 'Space Grotesk', sans-serif;
-        }
-
-        .metric-bar {
-            height: 4px;
-            background-color: #1e293b;
-            border-radius: 2px;
-            overflow: hidden;
-            margin-top: 0.5rem;
-        }
-
-        .metric-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #2563eb, #7c3aed);
-            border-radius: 2px;
-        }
-
-        .server-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #1e293b;
-        }
-
-        .server-item:last-child {
-            border-bottom: none;
-        }
-
-        .server-name {
-            font-size: 0.875rem;
-            color: #cbd5e1;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .server-status {
-            font-size: 0.75rem;
-            color: #10b981;
+        .primary-btn {
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            border-radius: 12px;
+            padding: 12px 24px;
             font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            border: none;
+            cursor: pointer;
         }
 
-        .section-heading {
-            text-align: center;
-            margin-bottom: 3rem;
+        .primary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
         }
 
-        .section-heading h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #e2e8f0;
+        .secondary-btn {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            color: #6ee7b7;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
         }
 
-        .section-heading p {
-            font-size: 1.125rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto;
+        .secondary-btn:hover {
+            background: rgba(16, 185, 129, 0.25);
+            border-color: rgba(16, 185, 129, 0.6);
+            transform: translateY(-2px);
         }
 
-        .pricing-card {
-            background-color: #1e293b;
-            border: 2px solid rgba(124, 58, 237, 0.3);
-            padding: 3rem;
-            border-radius: 0.75rem;
-            max-width: 500px;
-            margin: 0 auto;
+        .card {
+            background: rgba(30, 41, 59, 0.9);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            border-radius: 16px;
+            padding: 24px;
             transition: all 0.3s ease;
         }
 
-        .pricing-card:hover {
-            border-color: rgba(124, 58, 237, 0.6);
-            box-shadow: 0 30px 60px rgba(124, 58, 237, 0.2);
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.25);
         }
 
-        .pricing-header {
-            margin-bottom: 2rem;
-        }
-
-        .price-amount {
-            font-size: 3rem;
-            font-weight: 700;
-            color: #e2e8f0;
-            display: flex;
-            align-items: baseline;
-            gap: 0.5rem;
-        }
-
-        .price-currency {
-            font-size: 1.5rem;
-        }
-
-        .price-period {
-            color: #94a3b8;
-            font-size: 1rem;
-            font-weight: 500;
-        }
-
-        .pricing-description {
-            color: #cbd5e1;
-            font-size: 0.875rem;
-            margin-top: 0.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            margin: 2rem 0;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .feature-list li {
-            display: flex;
+        .pill-badge {
+            display: inline-flex;
             align-items: center;
-            gap: 0.75rem;
-        }
-
-        .feature-list svg {
-            width: 20px;
-            height: 20px;
-            color: #10b981;
-            flex-shrink: 0;
-        }
-
-        .replit-perk {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            gap: 8px;
+            background: rgba(124, 58, 237, 0.1);
             border: 1px solid rgba(124, 58, 237, 0.3);
-            border-radius: 0.5rem;
-            padding: 1rem;
-            margin: 1.5rem 0;
+            border-radius: 20px;
+            padding: 6px 12px;
+            font-size: 13px;
+            color: #c4b5fd;
+            margin-bottom: 16px;
+        }
+
+        .pill-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+        }
+
+        nav {
+            background: transparent;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 16px 0;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
             display: flex;
             align-items: center;
-            gap: 0.75rem;
+            gap: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            color: rgb(226, 232, 240);
         }
 
-        .replit-perk-icon {
-            font-size: 1.5rem;
+        .logo-regular {
+            font-weight: 700;
         }
 
-        .replit-perk-text {
-            color: #cbd5e1;
-            font-size: 0.875rem;
+        .logo-italic {
+            font-style: italic;
+            font-weight: 700;
         }
 
-        .replit-perk-highlight {
-            color: #7c3aed;
-            font-weight: 600;
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            align-items: center;
         }
 
-        .footer-grid {
+        .nav-links a {
+            text-decoration: none;
+            color: rgb(226, 232, 240);
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        .grid-2 {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            padding: 2rem 0;
-            border-top: 1px solid #1e293b;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
         }
 
-        .footer-section h4 {
-            margin-bottom: 1rem;
-            color: #e2e8f0;
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
         }
 
-        .footer-link {
-            display: block;
+        .grid-6 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 32px 24px;
+        }
+
+        .feature-card svg {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            color: #60a5fa;
+        }
+
+        .feature-card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 14px;
+            color: #cbd5e1;
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            border-radius: 50%;
+            font-weight: 700;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .testimonial-card {
+            padding: 32px;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 16px;
+        }
+
+        .star {
+            color: #fbbf24;
+            font-size: 16px;
+        }
+
+        .testimonial-text {
+            font-size: 14px;
+            margin-bottom: 16px;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .accordion {
+            margin-bottom: 16px;
+        }
+
+        .accordion-button {
+            width: 100%;
+            padding: 20px;
+            background: rgba(30, 41, 59, 0.9);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            border-radius: 12px;
+            color: rgb(226, 232, 240);
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .accordion-button:hover {
+            background: rgba(30, 41, 59, 0.95);
+            border-color: rgba(124, 58, 237, 0.5);
+        }
+
+        .accordion-button.active {
+            background: rgba(124, 58, 237, 0.15);
+            border-color: rgba(124, 58, 237, 0.5);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-top: none;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .accordion-content.active {
+            max-height: 500px;
+        }
+
+        .accordion-content-inner {
+            padding: 20px;
+            color: #cbd5e1;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: rgba(15, 23, 42, 0.8);
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+            padding: 40px 0 20px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
             color: #94a3b8;
             text-decoration: none;
-            margin-bottom: 0.5rem;
-            font-size: 0.875rem;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
-        .footer-link:hover {
-            color: #2563eb;
+        .footer-links a:hover {
+            color: #60a5fa;
         }
 
-        .floating-box {
-            position: relative;
-            animation: float 3s ease-in-out infinite;
-        }
+        @media (max-width: 768px) {
+            .grid-2,
+            .grid-3,
+            .grid-6 {
+                grid-template-columns: 1fr;
+            }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+            .nav-links {
+                gap: 16px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .section {
+                padding: 40px 0;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
         }
     </style>
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-[#0f172a] border-b border-[#1e293b] z-40">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-2">
-                <span class="text-2xl">⚡</span>
-                <span class="text-white font-bold text-lg">MCPSuper<span class="italic gradient-text">Hero</span></span>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v12M6 12h12"></path>
+                </svg>
+                <span class="logo-regular">MCP</span>
+                <span class="logo-italic">SuperHero</span>
             </a>
-
-            <!-- Desktop Nav Items -->
-            <div class="nav-items hidden md:flex items-center gap-8">
-                <a href="#features" class="nav-link">Features</a>
-                <a href="#how-it-works" class="nav-link">How It Works</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#faq" class="nav-link">FAQ</a>
-            </div>
-
-            <!-- CTA Buttons -->
-            <div class="hidden md:flex items-center gap-4">
-                <a href="https://mcpsuperhero.com/login" class="nav-link">Log in</a>
-                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary">Get Started</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button class="hamburger md:hidden">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile-menu md:hidden">
-            <a href="#features" class="nav-link">Features</a>
-            <a href="#how-it-works" class="nav-link">How It Works</a>
-            <a href="#testimonials" class="nav-link">Testimonials</a>
-            <a href="#pricing" class="nav-link">Pricing</a>
-            <a href="#faq" class="nav-link">FAQ</a>
-            <a href="https://mcpsuperhero.com/login" class="nav-link">Log in</a>
-            <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary w-full text-center">Get Started</a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#" onclick="event.preventDefault(); alert('Log in functionality would be implemented here');">Log in</a></li>
+                <li><a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="primary-btn">Get Started</a></li>
+            </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <!-- Left Content -->
+    <section class="hero-gradient hero-glow section">
+        <div class="container">
+            <div class="grid-2">
                 <div>
-                    <div class="status-pill">
-                        <span>⚡</span>
-                        <span>MCP Analytics Platform · $9.99/mo</span>
-                    </div>
-
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-                        Monitor Your <span class="gradient-text">MCP Infrastructure</span> in Real-Time
+                    <div class="pill-badge">MCP Monitoring Platform · $9.99/mo</div>
+                    <h1 style="font-size: 48px; line-height: 1.2; margin-bottom: 24px;">
+                        Monitor Your MCP Servers with<br>
+                        <span class="gradient-text">Total Confidence</span>
                     </h1>
-
-                    <p class="text-lg text-gray-400 mb-8 max-w-xl">
-                        Real-time analytics, performance optimization, and error tracking for your Model Context Protocol servers. Built for developers who care about reliability.
+                    <p style="font-size: 18px; color: #cbd5e1; margin-bottom: 32px; max-width: 500px;">
+                        Real-time monitoring, instant alerts, and comprehensive analytics for all your MCP servers. Get insights into uptime, latency, errors, and costs.
                     </p>
-
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                        <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary text-center">
-                            Subscribe Now →
+                    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                        <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="primary-btn" style="font-size: 16px; padding: 14px 28px;">
+                            Get Started for $9.99/mo →
                         </a>
-                        <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-secondary-green text-center">
+                        <button class="secondary-btn" style="font-size: 16px; padding: 14px 28px;">
                             + 1 Month Free Replit
-                        </a>
+                        </button>
                     </div>
-
-                    <div class="social-proof">
-                        <div class="flex items-center -space-x-2">
-                            <div class="avatar-circle">A</div>
-                            <div class="avatar-circle">B</div>
-                            <div class="avatar-circle">C</div>
-                            <div class="avatar-circle">+</div>
-                        </div>
-                        <span class="text-gray-400 text-sm">148+ developers trust MCPSuperHero</span>
-                        <span class="text-yellow-400">★★★★★</span>
-                    </div>
+                    <p style="font-size: 13px; color: #64748b; margin-top: 24px;">2,400+ developers trust us · ⭐⭐⭐⭐⭐ 4.8/5 stars</p>
                 </div>
-
-                <!-- Right - Dashboard Mockup -->
-                <div class="floating-box">
-                    <div class="dashboard-mockup">
-                        <div class="dashboard-header">
-                            <div class="dashboard-title">MCP Server Status</div>
-                            <div class="status-indicator"></div>
-                        </div>
-
-                        <div class="metric-box">
-                            <div class="metric-label">Overall Uptime</div>
-                            <div class="metric-value">99.98%</div>
-                            <div class="metric-bar">
-                                <div class="metric-bar-fill" style="width: 99.98%;"></div>
+                <div>
+                    <div class="card" style="position: relative; z-index: 2;">
+                        <div style="margin-bottom: 24px;">
+                            <h3 style="font-size: 16px; margin-bottom: 20px; color: #e2e8f0;">MCP Server Status</h3>
+                            <div style="display: grid; gap: 16px;">
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                        <span style="font-size: 13px; color: #cbd5e1;">Uptime</span>
+                                        <span style="font-size: 20px; font-weight: 700; color: #10b981;">99.98%</span>
+                                    </div>
+                                    <div style="height: 4px; background: rgba(124, 58, 237, 0.2); border-radius: 2px; overflow: hidden;">
+                                        <div style="height: 100%; background: #10b981; width: 99.98%;"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                        <span style="font-size: 13px; color: #cbd5e1;">Avg Latency</span>
+                                        <span style="font-size: 20px; font-weight: 700; color: #60a5fa;">48ms</span>
+                                    </div>
+                                    <div style="height: 4px; background: rgba(124, 58, 237, 0.2); border-radius: 2px;"></div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="metric-box">
-                            <div class="metric-label">Avg Latency</div>
-                            <div class="metric-value">48ms</div>
-                            <div class="metric-bar">
-                                <div class="metric-bar-fill" style="width: 65%;"></div>
+                        <div style="border-top: 1px solid rgba(124, 58, 237, 0.2); padding-top: 20px;">
+                            <div style="font-size: 12px; color: #cbd5e1; margin-bottom: 16px; font-weight: 600;">Active Servers (12)</div>
+                            <div style="display: grid; gap: 10px;">
+                                <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0;">
+                                    <span style="width: 6px; height: 6px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+                                    <span style="font-size: 13px; color: #cbd5e1;">prod-api-01</span>
+                                    <span style="margin-left: auto; font-size: 12px; color: #6ee7b7; font-weight: 600;">Online</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0;">
+                                    <span style="width: 6px; height: 6px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+                                    <span style="font-size: 13px; color: #cbd5e1;">prod-api-02</span>
+                                    <span style="margin-left: auto; font-size: 12px; color: #6ee7b7; font-weight: 600;">Online</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 8px; padding: 8px 0;">
+                                    <span style="width: 6px; height: 6px; background: #f59e0b; border-radius: 50%; display: inline-block;"></span>
+                                    <span style="font-size: 13px; color: #cbd5e1;">backup-01</span>
+                                    <span style="margin-left: auto; font-size: 12px; color: #fbbf24; font-weight: 600;">Standby</span>
+                                </div>
                             </div>
-                        </div>
-
-                        <div class="metric-box">
-                            <div class="metric-label">Active Servers</div>
-                            <div class="metric-value">12</div>
-                        </div>
-
-                        <div class="metric-label" style="margin-bottom: 1rem;">Server Details</div>
-                        <div class="server-item">
-                            <span class="server-name">
-                                <span>●</span> prod-api-01
-                            </span>
-                            <span class="server-status">ACTIVE</span>
-                        </div>
-                        <div class="server-item">
-                            <span class="server-name">
-                                <span>●</span> prod-api-02
-                            </span>
-                            <span class="server-status">ACTIVE</span>
-                        </div>
-                        <div class="server-item">
-                            <span class="server-name">
-                                <span>●</span> backup-01
-                            </span>
-                            <span class="server-status">ACTIVE</span>
                         </div>
                     </div>
                 </div>
@@ -799,488 +501,347 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f172a]">
-        <div class="max-w-7xl mx-auto">
-            <div class="section-heading">
-                <h2>Powerful Features for MCP Management</h2>
-                <p>Everything you need to monitor, optimize, and scale your Model Context Protocol infrastructure</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Feature 1 -->
-                <div class="feature-card">
-                    <div class="feature-icon-circle mb-4">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 2.2"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Real-Time Server Monitoring</h3>
-                    <p class="text-gray-400">Watch server performance metrics update in real-time with live dashboards and instant notifications.</p>
+    <section class="section" id="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features for MCP Management</h2>
+            <div class="grid-6">
+                <div class="card feature-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <h3>Real-Time Monitoring</h3>
+                    <p>Instant visibility into all your MCP servers with live status updates, response times, and performance metrics.</p>
                 </div>
 
-                <!-- Feature 2 -->
-                <div class="feature-card">
-                    <div class="feature-icon-circle mb-4">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="2" x2="12" y2="22"></line>
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Usage Analytics</h3>
-                    <p class="text-gray-400">Track API calls, token usage, and request patterns to understand your infrastructure costs.</p>
+                <div class="card feature-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="2" x2="12" y2="22"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <h3>Usage Analytics</h3>
+                    <p>Track API calls, request patterns, and usage trends across all your servers with detailed analytics dashboards.</p>
                 </div>
 
-                <!-- Feature 3 -->
-                <div class="feature-card">
-                    <div class="feature-icon-circle mb-4">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M3 12h18M3 6h18M3 18h18"></path>
-                            <circle cx="12" cy="12" r="9"></circle>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Performance Optimization</h3>
-                    <p class="text-gray-400">Get AI-powered recommendations to optimize latency, reduce costs, and improve server efficiency.</p>
+                <div class="card feature-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    <h3>Error Tracking</h3>
+                    <p>Automatic error detection and alerts. Get notified instantly when something goes wrong, with detailed error logs.</p>
                 </div>
 
-                <!-- Feature 4 -->
-                <div class="feature-card">
-                    <div class="feature-icon-circle mb-4">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="12" y1="8" x2="12" y2="16"></line>
-                            <line x1="8" y1="12" x2="16" y2="12"></line>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Error Tracking & Alerts</h3>
-                    <p class="text-gray-400">Catch errors before your users do with intelligent error detection and instant alert notifications.</p>
+                <div class="card feature-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="1" x2="12" y2="23"></line>
+                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <h3>Cost Management</h3>
+                    <p>Monitor API costs in real-time and identify optimization opportunities. Set budgets and receive alerts.</p>
                 </div>
 
-                <!-- Feature 5 -->
-                <div class="feature-card">
-                    <div class="feature-icon-circle mb-4">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v20M2 12h20"></path>
-                            <circle cx="12" cy="12" r="10"></circle>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Cost Management</h3>
-                    <p class="text-gray-400">Monitor spending patterns, set budgets, and receive alerts before you exceed cost thresholds.</p>
+                <div class="card feature-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="2" y1="20" x2="22" y2="20"></line>
+                    </svg>
+                    <h3>Multi-Server Dashboard</h3>
+                    <p>Unified dashboard to manage and monitor all your MCP servers in one place with customizable widgets.</p>
                 </div>
 
-                <!-- Feature 6 -->
-                <div class="feature-card">
-                    <div class="feature-icon-circle mb-4">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="3" width="7" height="7"></rect>
-                            <rect x="14" y="14" width="7" height="7"></rect>
-                            <rect x="3" y="14" width="7" height="7"></rect>
-                        </svg>
-                    </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Multi-Server Dashboard</h3>
-                    <p class="text-gray-400">Manage unlimited servers from a single unified dashboard with customizable views and filters.</p>
+                <div class="card feature-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    <h3>Team Collaboration</h3>
+                    <p>Invite team members, set roles and permissions, and collaborate on monitoring and incident response.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
-        <div class="max-w-7xl mx-auto">
-            <div class="section-heading">
-                <h2>Get Started in 3 Steps</h2>
-                <p>Start monitoring your MCP infrastructure within minutes</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Step 1 -->
-                <div class="text-center">
-                    <div class="gradient-number mb-6 mx-auto">1</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Connect Your Servers</h3>
-                    <p class="text-gray-400">Use our simple API key integration or click-to-connect options to link your MCP servers to MCPSuperHero.</p>
+    <!-- How It Works -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Get Started in 3 Steps</h2>
+            <div class="grid-3">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px;">Connect Your Servers</h3>
+                    <p style="color: #cbd5e1; font-size: 14px;">Add your MCP servers to the dashboard. Get API credentials and configure endpoints in minutes.</p>
                 </div>
-
-                <!-- Step 2 -->
-                <div class="text-center">
-                    <div class="gradient-number mb-6 mx-auto">2</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Monitor in Real-Time</h3>
-                    <p class="text-gray-400">Watch your infrastructure metrics come to life with live dashboards, charts, and performance insights.</p>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px;">Set Up Alerts</h3>
+                    <p style="color: #cbd5e1; font-size: 14px;">Configure notifications for downtime, errors, and performance issues. Receive alerts via email or Slack.</p>
                 </div>
-
-                <!-- Step 3 -->
-                <div class="text-center">
-                    <div class="gradient-number mb-6 mx-auto">3</div>
-                    <h3 class="text-xl font-bold text-white mb-3">Optimize & Scale</h3>
-                    <p class="text-gray-400">Use AI-powered recommendations to optimize performance, reduce costs, and scale confidently.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f172a]">
-        <div class="max-w-7xl mx-auto">
-            <div class="section-heading">
-                <h2>Loved by MCP Developers</h2>
-                <p>See what developers are saying about MCPSuperHero</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card">
-                    <div class="star-rating mb-3">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">"MCPSuperHero has been a game-changer for monitoring our MCP infrastructure. The real-time alerts saved us from a major incident last week."</p>
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">AC</div>
-                        <div>
-                            <p class="text-white font-bold">Alex Chen</p>
-                            <p class="text-gray-400 text-sm">CTO, API Labs</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card">
-                    <div class="star-rating mb-3">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">"The cost management features helped us reduce our MCP spending by 30%. Simple, effective, and incredibly valuable for our team."</p>
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">SR</div>
-                        <div>
-                            <p class="text-white font-bold">Sarah Rodriguez</p>
-                            <p class="text-gray-400 text-sm">DevOps Lead, CloudSync</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card">
-                    <div class="star-rating mb-3">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p class="text-gray-300 mb-4">"At $9.99/month, this is a steal. The dashboard is intuitive, support is responsive, and the features keep improving. Highly recommend!"</p>
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">DJ</div>
-                        <div>
-                            <p class="text-white font-bold">David Jung</p>
-                            <p class="text-gray-400 text-sm">Engineering Manager, ModelWorks</p>
-                        </div>
-                    </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3 style="font-size: 20px; margin-bottom: 12px;">Monitor & Optimize</h3>
+                    <p style="color: #cbd5e1; font-size: 14px;">Track metrics, analyze performance, and optimize your MCP infrastructure for reliability and cost.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
-    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-[#0f172a] to-[#1e293b]">
-        <div class="max-w-7xl mx-auto">
-            <div class="section-heading">
-                <h2>Simple, Transparent Pricing</h2>
-                <p>One plan. All features. Scale as you grow.</p>
+    <section class="section" id="pricing" style="background: rgba(124, 58, 237, 0.05);">
+        <div class="container">
+            <h2 class="section-title">Simple, Transparent Pricing</h2>
+            <div style="max-width: 500px; margin: 0 auto;">
+                <div class="card">
+                    <h3 style="font-size: 24px; margin-bottom: 8px;">MCP Analytics</h3>
+                    <p style="color: #cbd5e1; margin-bottom: 24px; font-size: 14px;">Everything you need to monitor your MCP servers</p>
+
+                    <div style="border: 2px solid rgba(124, 58, 237, 0.5); border-radius: 12px; padding: 24px; margin-bottom: 24px; background: rgba(124, 58, 237, 0.1);">
+                        <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 8px;">
+                            <span style="font-size: 42px; font-weight: 700;">$9.99</span>
+                            <span style="color: #cbd5e1; font-size: 16px;">/month</span>
+                        </div>
+                        <p style="color: #6ee7b7; font-size: 13px; margin-bottom: 16px;">Billed monthly. Cancel anytime.</p>
+                        <div style="display: grid; gap: 12px; font-size: 14px; color: #cbd5e1;">
+                            <div style="display: flex; gap: 8px;">
+                                <span style="color: #10b981;">✓</span>
+                                <span>Unlimited servers</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <span style="color: #10b981;">✓</span>
+                                <span>Real-time monitoring</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <span style="color: #10b981;">✓</span>
+                                <span>Usage analytics</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <span style="color: #10b981;">✓</span>
+                                <span>Error tracking & alerts</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <span style="color: #10b981;">✓</span>
+                                <span>Cost management</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <span style="color: #10b981;">✓</span>
+                                <span>Team collaboration</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <span style="color: #10b981;">✓</span>
+                                <span>Email & Slack alerts</span>
+                            </div>
+                            <div style="display: flex; gap: 8px;">
+                                <span style="color: #10b981;">✓</span>
+                                <span>API access</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 12px; flex-direction: column;">
+                        <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="primary-btn" style="text-align: center; width: 100%;">
+                            Subscribe Now
+                        </a>
+                        <button class="secondary-btn" style="width: 100%; text-align: center;">
+                            + 1 Month Free Replit
+                        </button>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="pricing-card">
-                <div class="pricing-header">
-                    <div class="price-amount">
-                        <span class="price-currency">$</span>
-                        <span>9.99</span>
-                        <span class="price-period">/month</span>
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">What Developers Say</h2>
+            <div class="grid-3">
+                <div class="card testimonial-card">
+                    <div class="testimonial-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
                     </div>
-                    <p class="pricing-description">Billed monthly. Cancel anytime.</p>
+                    <p class="testimonial-text">"MCP SuperHero has been a game-changer for monitoring our production servers. The real-time alerts have saved us countless hours."</p>
+                    <div class="testimonial-author">Sarah Chen, DevOps Engineer</div>
+                    <div style="color: #64748b; font-size: 12px; margin-top: 8px;">TechStartup Inc.</div>
                 </div>
 
-                <ul class="feature-list">
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>Real-time server monitoring for unlimited servers</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>Advanced usage analytics & cost tracking</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>Error detection & instant alerts</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>Performance optimization recommendations</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>Unified multi-server dashboard</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>REST API access for integrations</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>Email & community support</span>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/>
-                        </svg>
-                        <span>Custom alert thresholds & rules</span>
-                    </li>
-                </ul>
-
-                <div class="replit-perk">
-                    <div class="replit-perk-icon">🚀</div>
-                    <div class="replit-perk-text">
-                        <span class="replit-perk-highlight">Subscribers get 1 free month of Replit!</span> Bonus value for MCPSuperHero members.
+                <div class="card testimonial-card">
+                    <div class="testimonial-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
                     </div>
+                    <p class="testimonial-text">"The cost management features alone have helped us reduce our MCP API expenses by 30%. Highly recommended!"</p>
+                    <div class="testimonial-author">Marcus Johnson, CTO</div>
+                    <div style="color: #64748b; font-size: 12px; margin-top: 8px;">CloudOps Solutions</div>
                 </div>
 
-                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary w-full text-center block">
-                    Subscribe Now
-                </a>
-
-                <p class="text-center text-gray-400 text-sm mt-4">
-                    Cancel anytime. No contracts or hidden fees.
-                </p>
+                <div class="card testimonial-card">
+                    <div class="testimonial-stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Setting up monitoring was incredibly easy. Within 5 minutes, we had full visibility into our entire MCP infrastructure."</p>
+                    <div class="testimonial-author">Lisa Rodriguez, Full Stack Developer</div>
+                    <div style="color: #64748b; font-size: 12px; margin-top: 8px;">DataFlow AI</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#0f172a]">
-        <div class="max-w-4xl mx-auto">
-            <div class="section-heading">
-                <h2>Frequently Asked Questions</h2>
-                <p>Everything you need to know about MCPSuperHero</p>
-            </div>
-
-            <div>
-                <!-- FAQ 1 -->
-                <details class="accordion-item">
-                    <summary class="accordion-summary">
-                        <span>What is Model Context Protocol (MCP)?</span>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </summary>
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="accordion">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        What is an MCP server?
+                        <span>+</span>
+                    </button>
                     <div class="accordion-content">
-                        <p>Model Context Protocol is a standardized framework for building AI applications that require context from multiple sources. MCPSuperHero helps you monitor, optimize, and scale MCP server infrastructure efficiently.</p>
-                    </div>
-                </details>
-
-                <!-- FAQ 2 -->
-                <details class="accordion-item">
-                    <summary class="accordion-summary">
-                        <span>How long does setup take?</span>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                        <div class="accordion-content-inner">
+                            An MCP (Model Context Protocol) server is a backend service that provides standardized access to AI models and tools. MCP SuperHero helps you monitor these servers to ensure optimal performance and availability.
                         </div>
-                    </summary>
-                    <div class="accordion-content">
-                        <p>Most users have MCPSuperHero up and running within 5-10 minutes. Simply generate an API key, add it to your MCP servers, and start monitoring. We provide step-by-step setup guides for all major frameworks.</p>
                     </div>
-                </details>
+                </div>
 
-                <!-- FAQ 3 -->
-                <details class="accordion-item">
-                    <summary class="accordion-summary">
-                        <span>Can I monitor multiple servers with one account?</span>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </summary>
+                <div class="accordion">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        Can I monitor unlimited servers?
+                        <span>+</span>
+                    </button>
                     <div class="accordion-content">
-                        <p>Yes! MCPSuperHero is built for unlimited server monitoring. Add as many servers as you need to your account, manage them all from a single unified dashboard, and set up different alert rules for each.</p>
+                        <div class="accordion-content-inner">
+                            Yes! With MCP SuperHero, you can monitor unlimited MCP servers for $9.99/month. No per-server fees. Perfect for scaling your infrastructure.
+                        </div>
                     </div>
-                </details>
+                </div>
 
-                <!-- FAQ 4 -->
-                <details class="accordion-item">
-                    <summary class="accordion-summary">
-                        <span>Is my data secure?</span>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </summary>
+                <div class="accordion">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        How often are metrics updated?
+                        <span>+</span>
+                    </button>
                     <div class="accordion-content">
-                        <p>Security is our top priority. All data is encrypted in transit and at rest. We comply with industry standards including SOC 2 Type II, use secure API authentication, and never share your data with third parties.</p>
+                        <div class="accordion-content-inner">
+                            Metrics are updated in real-time, with data refreshing every few seconds. You get instant visibility into your server status and performance.
+                        </div>
                     </div>
-                </details>
+                </div>
 
-                <!-- FAQ 5 -->
-                <details class="accordion-item">
-                    <summary class="accordion-summary">
-                        <span>Can I cancel my subscription anytime?</span>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </summary>
+                <div class="accordion">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        What alert channels are supported?
+                        <span>+</span>
+                    </button>
                     <div class="accordion-content">
-                        <p>Absolutely. You can cancel your subscription at any time from your account settings. No long-term contracts, no hidden fees. Your data will be available for 30 days after cancellation.</p>
+                        <div class="accordion-content-inner">
+                            We support email, Slack, PagerDuty, and webhook integrations. You can configure multiple notification channels per alert.
+                        </div>
                     </div>
-                </details>
+                </div>
 
-                <!-- FAQ 6 -->
-                <details class="accordion-item">
-                    <summary class="accordion-summary">
-                        <span>Is there API access for integrations?</span>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </summary>
+                <div class="accordion">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        Is there a setup fee?
+                        <span>+</span>
+                    </button>
                     <div class="accordion-content">
-                        <p>Yes. MCPSuperHero includes a comprehensive REST API for retrieving metrics, managing alerts, and integrating with your existing tools. Full API documentation is available in your dashboard.</p>
+                        <div class="accordion-content-inner">
+                            No setup fees, no hidden charges. You pay only $9.99/month. Plus, new subscribers get 1 month free Replit.
+                        </div>
                     </div>
-                </details>
+                </div>
 
-                <!-- FAQ 7 -->
-                <details class="accordion-item">
-                    <summary class="accordion-summary">
-                        <span>What kind of support do you offer?</span>
-                        <div class="accordion-toggle">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </div>
-                    </summary>
+                <div class="accordion">
+                    <button class="accordion-button" onclick="toggleAccordion(this)">
+                        Can I export my data?
+                        <span>+</span>
+                    </button>
                     <div class="accordion-content">
-                        <p>All subscribers get email support and access to our community forum. We aim to respond to all inquiries within 24 hours. Priority support is available for enterprise customers.</p>
+                        <div class="accordion-content-inner">
+                            Yes, you can export historical metrics, logs, and reports in multiple formats including CSV and JSON through our API.
+                        </div>
                     </div>
-                </details>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Final CTA Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#1e293b] to-[#1e293b] border-t border-[#1e293b]">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-4xl font-bold text-white mb-6">Ready to Optimize Your MCP Infrastructure?</h2>
-            <p class="text-xl text-gray-400 mb-8">Join 148+ developers who trust MCPSuperHero for monitoring and optimization.</p>
-            <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="btn-primary inline-block text-lg">
-                Get Started for $9.99/mo →
-            </a>
+    <!-- CTA Section -->
+    <section class="section hero-gradient hero-glow" style="text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 36px; margin-bottom: 20px;">Ready to Monitor Your MCP Servers?</h2>
+            <p style="font-size: 18px; color: #cbd5e1; margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Join 2,400+ developers who trust MCP SuperHero for production monitoring. Get started today for $9.99/month.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+                <a href="https://buy.stripe.com/dRm8wO4QW4rV6424bKfbq03" class="primary-btn" style="font-size: 16px; padding: 14px 28px;">
+                    Start Free Today
+                </a>
+                <button class="secondary-btn" style="font-size: 16px; padding: 14px 28px;">
+                    + 1 Month Free Replit
+                </button>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0f172a] border-t border-[#1e293b] px-4 sm:px-6 lg:px-8 py-16">
-        <div class="max-w-7xl mx-auto">
-            <div class="footer-grid">
-                <!-- Brand Column -->
-                <div>
-                    <div class="flex items-center gap-2 mb-4">
-                        <span class="text-2xl">⚡</span>
-                        <span class="text-white font-bold text-lg">MCPSuper<span class="italic gradient-text">Hero</span></span>
-                    </div>
-                    <p class="text-gray-400 text-sm">Monitor and optimize your MCP infrastructure with real-time analytics and error tracking.</p>
-                </div>
-
-                <!-- Products Column -->
-                <div>
-                    <h4>Products</h4>
-                    <a href="https://resumesuperhero.com" class="footer-link">ResumeSuperHero</a>
-                    <a href="https://shopifysuperhero.com" class="footer-link">ShopifySuperHero</a>
-                    <a href="https://seoaisuperhero.com" class="footer-link">SEOAISuperHero</a>
-                    <a href="https://mcpsuperhero.com" class="footer-link">MCPSuperHero</a>
-                    <a href="https://theaisuperheroes.com" class="footer-link">TheAISuperheroes</a>
-                </div>
-
-                <!-- Company Column -->
-                <div>
-                    <h4>Company</h4>
-                    <a href="#" class="footer-link">About Us</a>
-                    <a href="#" class="footer-link">Blog</a>
-                    <a href="#" class="footer-link">Careers</a>
-                    <a href="#" class="footer-link">Contact</a>
-                </div>
-
-                <!-- Legal Column -->
-                <div>
-                    <h4>Legal</h4>
-                    <a href="#" class="footer-link">Privacy Policy</a>
-                    <a href="#" class="footer-link">Terms of Service</a>
-                    <a href="#" class="footer-link">Security</a>
-                    <a href="#" class="footer-link">Compliance</a>
-                </div>
-
-                <!-- Connect Column -->
-                <div>
-                    <h4>Connect</h4>
-                    <a href="#" class="footer-link">Twitter</a>
-                    <a href="#" class="footer-link">GitHub</a>
-                    <a href="#" class="footer-link">Discord</a>
-                    <a href="mailto:support@mcpsuperhero.com" class="footer-link">Email Support</a>
-                </div>
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#faq">FAQ</a>
+                <a href="mailto:partners@theaisuperheroes.com">Contact</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
             </div>
-
-            <div class="border-t border-[#1e293b] mt-12 pt-8 text-center text-gray-400 text-sm">
-                <p>&copy; 2026 MCPSuperHero. All rights reserved. Built with &lt;3 for MCP developers.</p>
+            <div>
+                © 2026 MCP SuperHero. All rights reserved. |
+                <a href="https://theaisuperheroes.com" style="color: #94a3b8; text-decoration: none;">TheAISuperheroes.com</a>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        document.querySelector('.hamburger').addEventListener('click', function() {
-            document.querySelector('.mobile-menu').classList.toggle('active');
-        });
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const isActive = button.classList.contains('active');
 
-        // Close mobile menu when link is clicked
-        document.querySelectorAll('.mobile-menu .nav-link').forEach(link => {
-            link.addEventListener('click', function() {
-                document.querySelector('.mobile-menu').classList.remove('active');
-            });
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                if (href !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(href);
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
+            document.querySelectorAll('.accordion-button.active').forEach(btn => {
+                if (btn !== button) {
+                    btn.classList.remove('active');
+                    btn.nextElementSibling.classList.remove('active');
+                    btn.innerHTML = btn.innerHTML.replace('−', '+');
                 }
             });
-        });
 
-        // Accordion details animation
-        document.querySelectorAll('details').forEach(detail => {
-            detail.addEventListener('toggle', function() {
-                if (this.open) {
-                    this.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            button.classList.toggle('active');
+            content.classList.toggle('active');
+            button.innerHTML = button.innerHTML.replace(isActive ? '−' : '+', isActive ? '+' : '−');
+        }
+
+        document.querySelectorAll('.primary-btn, .secondary-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'button_click', {
+                        'button_text': this.textContent.trim(),
+                        'button_type': this.classList.contains('primary-btn') ? 'primary' : 'secondary'
+                    });
                 }
             });
         });
