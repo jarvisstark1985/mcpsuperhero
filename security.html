@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP SuperHero - Security</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2C3KN7T');</script>
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RVV7C7Y5YY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RVV7C7Y5YY');
+    </script>
+
+    <style>
+        :root {
+            --black: #0A0A0A;
+            --card: #141414;
+            --card-border: rgba(255,255,255,0.06);
+            --orange: #FF6B35;
+            --yellow: #FFD93D;
+            --blue: #4ECDC4;
+            --red: #FF4444;
+            --purple: #6C63FF;
+            --teal: #4ECDC4;
+            --pink: #E97698;
+            --white: #FFFFFF;
+            --gray: #888;
+            --light-gray: #B0B0B0;
+            --max-w: 1400px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            font-family: 'Inter', sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            border-bottom: 1px solid var(--card-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--black);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .brand-italic {
+            font-style: italic;
+            color: var(--orange);
+        }
+
+        .nav-pill {
+            display: flex;
+            gap: 40px;
+            background: rgba(255,255,255,0.05);
+            padding: 12px 24px;
+            border-radius: 50px;
+            border: 1px solid var(--card-border);
+        }
+
+        .nav-pill a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-pill a:hover {
+            color: var(--orange);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .login {
+            color: var(--light-gray);
+            cursor: pointer;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .login:hover {
+            color: var(--orange);
+        }
+
+        .btn-cta {
+            background: var(--orange);
+            color: var(--black);
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-cta:hover {
+            background: #FF8C4A;
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+                flex-wrap: wrap;
+            }
+
+            .nav-pill {
+                display: none;
+                flex-direction: column;
+                gap: 12px;
+                position: absolute;
+                top: 60px;
+                left: 20px;
+                right: 20px;
+                background: var(--card);
+                padding: 20px;
+                border-radius: 12px;
+            }
+
+            .nav-pill.active {
+                display: flex;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav-right {
+                display: none;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 40px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, rgba(108,99,255,0.05) 100%);
+            border-bottom: 1px solid var(--card-border);
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--pink) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 20px;
+            color: var(--light-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 50px 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+
+        /* Security Content */
+        .security-content {
+            max-width: var(--max-w);
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .security-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        .security-card {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .security-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--orange);
+        }
+
+        .security-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,107,53,0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .security-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .security-card p {
+            color: var(--light-gray);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .security-badge-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .security-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--orange);
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .security-badge::before {
+            content: "✓";
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: rgba(255,107,53,0.2);
+            border-radius: 50%;
+            font-weight: 700;
+        }
+
+        .security-section {
+            margin-bottom: 60px;
+        }
+
+        .security-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--card-border);
+        }
+
+        .security-section h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 32px 0 16px;
+            color: var(--white);
+        }
+
+        .security-section p {
+            color: var(--light-gray);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .security-section ul {
+            color: var(--light-gray);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .security-section li {
+            margin-bottom: 10px;
+        }
+
+        .cta-section {
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 60px 40px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            border: none;
+            padding-bottom: 0;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: var(--light-gray);
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--orange);
+            color: var(--black);
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #FF8C4A;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--orange);
+            padding: 16px 40px;
+            border: 2px solid var(--orange);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,107,53,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .security-content {
+                padding: 40px 20px;
+            }
+
+            .security-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .security-section h2 {
+                font-size: 24px;
+            }
+
+            .cta-section {
+                padding: 40px 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--card-border);
+            padding: 60px 40px 40px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            max-width: var(--max-w);
+            margin: 0 auto 40px;
+        }
+
+        .footer-brand p {
+            color: var(--light-gray);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 16px;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col a {
+            color: var(--light-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--orange);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--card-border);
+            padding-top: 30px;
+            font-size: 13px;
+            color: var(--gray);
+            max-width: var(--max-w);
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            footer {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2C3KN7T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav>
+        <div class="logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="var(--orange)" stroke="var(--orange)"/>
+            </svg>
+            <span>MCP <span class="brand-italic">SuperHero</span></span>
+        </div>
+        <div class="nav-pill">
+            <a href="/">Home</a>
+            <a href="/#features">Features</a>
+            <a href="/#how-it-works">How It Works</a>
+            <a href="/#pricing">Pricing</a>
+            <a href="/#faq">FAQ</a>
+        </div>
+        <div class="nav-right">
+            <span class="login" onclick="window.location.href='/dashboard.html'">Login</span>
+            <a href="/#pricing" class="btn-cta">Get Started</a>
+        </div>
+        <button class="mobile-toggle" onclick="document.querySelector('.nav-pill').style.display = document.querySelector('.nav-pill').style.display === 'flex' ? 'none' : 'flex'">☰</button>
+    </nav>
+
+    <div class="hero">
+        <h1>Security at MCP SuperHero</h1>
+        <p>Enterprise-grade security and compliance for your integrations</p>
+    </div>
+
+    <div class="security-content">
+        <div class="security-grid">
+            <div class="security-card">
+                <div class="security-card-icon">🔐</div>
+                <h3>Data Encryption</h3>
+                <p>End-to-end encryption for all data in transit and at rest using industry-standard protocols.</p>
+                <div class="security-badge-list">
+                    <span class="security-badge">AES-256 Encryption</span>
+                    <span class="security-badge">TLS 1.3 Protocol</span>
+                    <span class="security-badge">Key Rotation</span>
+                </div>
+            </div>
+
+            <div class="security-card">
+                <div class="security-card-icon">👥</div>
+                <h3>Access Control</h3>
+                <p>Fine-grained access control with role-based permissions and OAuth 2.0 authentication.</p>
+                <div class="security-badge-list">
+                    <span class="security-badge">RBAC Policies</span>
+                    <span class="security-badge">OAuth 2.0 Support</span>
+                    <span class="security-badge">MFA Available</span>
+                </div>
+            </div>
+
+            <div class="security-card">
+                <div class="security-card-icon">✓</div>
+                <h3>Compliance</h3>
+                <p>Fully compliant with major regulatory standards and industry certifications.</p>
+                <div class="security-badge-list">
+                    <span class="security-badge">SOC 2 Type II</span>
+                    <span class="security-badge">GDPR Certified</span>
+                    <span class="security-badge">HIPAA Ready</span>
+                </div>
+            </div>
+
+            <div class="security-card">
+                <div class="security-card-icon">🏗️</div>
+                <h3>Infrastructure</h3>
+                <p>Highly available, redundant infrastructure with automatic failover and disaster recovery.</p>
+                <div class="security-badge-list">
+                    <span class="security-badge">AWS Powered</span>
+                    <span class="security-badge">Multi-Region</span>
+                    <span class="security-badge">99.99% Uptime SLA</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="security-section">
+            <h2>Data Encryption</h2>
+            <p>We employ military-grade encryption standards to protect your data:</p>
+            <h3>In-Transit Encryption</h3>
+            <p>All data transmitted between your systems and MCP SuperHero is encrypted using TLS 1.3. This prevents interception and ensures data integrity during transmission.</p>
+            <h3>At-Rest Encryption</h3>
+            <p>Sensitive data stored in our databases is encrypted using AES-256, the same encryption standard used by governments and financial institutions worldwide.</p>
+            <h3>Key Management</h3>
+            <p>Encryption keys are managed through AWS Key Management Service (KMS) with automatic rotation every 90 days. Keys are never stored in plaintext and are isolated from application code.</p>
+        </div>
+
+        <div class="security-section">
+            <h2>Access Control & Authentication</h2>
+            <p>Protect your integrations with enterprise-grade access management:</p>
+            <h3>Role-Based Access Control (RBAC)</h3>
+            <p>Define granular permissions for team members. Control who can create, modify, or delete connections at the individual level.</p>
+            <h3>OAuth 2.0 Authentication</h3>
+            <p>Support for OAuth 2.0 flows ensures secure authentication without sharing passwords. Integrated with major identity providers.</p>
+            <h3>Multi-Factor Authentication (MFA)</h3>
+            <p>Enable MFA on your account for an additional security layer. Supports TOTP and security keys.</p>
+        </div>
+
+        <div class="security-section">
+            <h2>Compliance & Certifications</h2>
+            <p>We maintain compliance with the strictest industry standards:</p>
+            <h3>SOC 2 Type II</h3>
+            <p>Audited and certified for security, availability, processing integrity, confidentiality, and privacy controls. Updated annually.</p>
+            <h3>GDPR Compliance</h3>
+            <p>Full compliance with EU General Data Protection Regulation. Data processing agreements available for all enterprise customers.</p>
+            <h3>HIPAA Ready</h3>
+            <p>Healthcare-compliant infrastructure for handling protected health information. Business Associate Agreements available upon request.</p>
+        </div>
+
+        <div class="security-section">
+            <h2>Infrastructure & Reliability</h2>
+            <p>Enterprise infrastructure with redundancy and disaster recovery:</p>
+            <h3>Multi-Region Architecture</h3>
+            <p>Applications are deployed across multiple AWS regions with automatic failover. Data is replicated across geographically distributed data centers.</p>
+            <h3>DDoS Protection</h3>
+            <p>AWS Shield provides automatic DDoS mitigation. All traffic is monitored for suspicious patterns and blocked at the edge.</p>
+            <h3>99.99% Uptime SLA</h3>
+            <p>Service level agreement guarantees 99.99% uptime with financial credits for any outages exceeding this threshold.</p>
+        </div>
+
+        <div class="security-section">
+            <h2>Incident Response</h2>
+            <p>We maintain a 24/7 incident response team:</p>
+            <h3>Security Monitoring</h3>
+            <p>Continuous monitoring using SIEM (Security Information and Event Management) tools to detect and respond to security events in real-time.</p>
+            <h3>Incident Response Plan</h3>
+            <p>Documented incident response procedures with clear escalation paths. Customers are notified within 4 hours of any confirmed security incident.</p>
+            <h3>Regular Security Audits</h3>
+            <p>Third-party security audits conducted quarterly. Penetration testing performed annually by certified security firms.</p>
+        </div>
+
+        <div class="security-section">
+            <h2>Bug Bounty Program</h2>
+            <p>We encourage responsible security researchers to help us identify vulnerabilities:</p>
+            <p>MCP SuperHero operates a bug bounty program through HackerOne. Security researchers are welcome to responsibly disclose vulnerabilities and receive rewards for valid findings.</p>
+            <p><strong>Reporting a Vulnerability:</strong> Email security@mcpsuperhero.com with details of the vulnerability. Allow 48 hours for acknowledgment and 90 days for remediation before public disclosure.</p>
+        </div>
+
+        <div class="cta-section">
+            <h2>Questions About Security?</h2>
+            <p>Contact our security team for more information about our security practices, compliance certifications, or to request a security audit.</p>
+            <div class="cta-buttons">
+                <a href="mailto:security@mcpsuperhero.com" class="btn-primary">Contact Security Team</a>
+                <a href="/#pricing" class="btn-secondary">View Pricing</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="var(--orange)" stroke="var(--orange)"/>
+                    </svg>
+                    <span>MCP <span class="brand-italic">SuperHero</span></span>
+                </div>
+                <p>Connect 40K+ tools and services via Model Context Protocol. Real-time sync, AI orchestration, and enterprise security for modern teams.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="/#features">Features</a></li>
+                    <li><a href="/#pricing">Pricing</a></li>
+                    <li><a href="/#how-it-works">How It Works</a></li>
+                    <li><a href="/dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/blog.html">Blog</a></li>
+                    <li><a href="/#faq">FAQ</a></li>
+                    <li><a href="/docs.html">MCP Docs</a></li>
+                    <li><a href="/api.html">API Reference</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/terms.html">Terms of Service</a></li>
+                    <li><a href="/security.html">Security</a></li>
+                    <li><a href="mailto:support@mcpsuperhero.com">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 MCP SuperHero. All rights reserved.</span>
+            <span>Part of <a href="https://theaisuperheroes.com" style="color: var(--orange);">TheAiSuperHeroes</a> portfolio</span>
+        </div>
+    </footer>
+</body>
+</html>
